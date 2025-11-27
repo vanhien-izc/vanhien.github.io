@@ -1,19 +1,36 @@
-<!doctype html>
-<html lang="vi">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thuốc trừ sâu sinh học - THPT Hùng Vương</title>
-  <link rel="icon" type="image/svg+xml" href="/logored.svg">
-  <script src="/_sdk/element_sdk.js"></script>
-  <style>
-        :root {
-            --primary-green: #2E7D32;
-            --light-green: #E8F5E9;
-            --accent-orange: #FF6F00;
-            --text-dark: #1B5E20;
-            --white: #ffffff;
-            --paper-bg: #fdfbf7;
+                            <!doctype html>
+                            <html lang="vi">
+                            <head>
+                                <meta charset="UTF-8">     
+                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                <title>Thuốc trừ sâu sinh học - THPT Hùng Vương</title>
+                                <link rel="preconnect" href="https://fonts.googleapis.com">
+                                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                                <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+                                <style>
+                                :root {
+                                    --primary-green: #2E7D32;
+                                        --light-green: #E8F5E9;
+                                        --accent-orange: #FF6F00;
+                                    --text-dark: #1B5E20;
+                                        --white: #ffffff;
+                                        --paper-bg: #fdfbf7;
+                                        --primary: #059669;
+                                        --primary-dark: #047857;
+                                        --primary-light: #D1FAE5;
+                                        --secondary: #0891B2;
+                                        --accent: #F59E0B;
+                                        --text-primary: #1A202C;
+                                        --text-secondary: #4A5568;
+                                        --text-muted: #718096;
+                                        --border: #E2E8F0;
+                                        --bg-light: #F7FAFC;
+                                        --bg-white: #FFFFFF;
+                                            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+                                        --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+                                            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+                                            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
 
         * {
@@ -23,18 +40,26 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #333;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #97c780;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             padding: 20px;
             color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
         }
 
         /* A3 Container Setup */
         .infographic-container {
             width: 100%;
-            max-width: 800px;
+            max-width: 1200px;
             background-color: var(--paper-bg);
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             position: relative;
@@ -67,7 +92,7 @@
             color: var(--white);
             padding: 5px 15px;
             border-radius: 20px;
-            font-weight: bold;
+            font-weight: 700;
             font-size: 0.9rem;
             text-transform: uppercase;
             display: inline-block;
@@ -80,11 +105,12 @@
             text-transform: uppercase;
             margin-bottom: 5px;
             line-height: 1.2;
+            font-weight: 800;
         }
 
         h2 {
             font-size: 1.2rem;
-            font-weight: 300;
+            font-weight: 400;
             opacity: 0.9;
         }
 
@@ -233,6 +259,7 @@
             font-size: 1.8rem;
             color: var(--primary-green);
             margin-bottom: 10px;
+            font-weight: 700;
         }
 
         .project-intro {
@@ -255,7 +282,7 @@
             font-size: 1.1rem;
             color: var(--primary-green);
             margin-bottom: 8px;
-            font-weight: bold;
+            font-weight: 700;
         }
 
         .intro-item p {
@@ -267,1138 +294,1843 @@
 
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
             gap: 20px;
             margin-top: 30px;
-        }
-
-        .stat-card {
-            text-align: center;
-            padding: 20px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .stat-circle {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 15px auto;
-            position: relative;
-        }
-
-        .stat-inner {
-            width: 75px;
-            height: 75px;
-            border-radius: 50%;
-            background: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .stat-number {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-green);
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            color: #555;
-            font-weight: 600;
-        }
-
-        /* INGREDIENTS SECTION */
-        .section-title {
-            font-size: 1.5rem;
-            color: var(--primary-green);
-            border-bottom: 2px solid var(--accent-orange);
-            display: inline-block;
-            margin-bottom: 20px;
-            padding-bottom: 5px;
-            margin-top: 30px;
-            text-transform: uppercase;
-            font-weight: bold;
-        }
-
-        .ingredients-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .ingredient-card {
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-            transition: all 0.4s ease;
-            border: 1px solid #e0e0e0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .ingredient-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(76, 175, 80, 0.15), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .ingredient-card:hover {
-            transform: translateY(-10px) scale(1.05);
-            box-shadow: 0 10px 25px rgba(46, 125, 50, 0.3);
-            border-color: #4CAF50;
-        }
-
-        .ingredient-card:hover::before {
-            left: 100%;
-        }
-
-        .ing-icon {
-            width: 60px;
-            height: 60px;
-            margin: 0 auto 10px auto;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-
-        .ingredient-card:hover .ing-icon {
-            transform: scale(1.15);
-        }
-
-        .ing-name {
-            font-weight: bold;
-            color: var(--text-dark);
-            transition: color 0.3s ease;
-        }
-
-        .ingredient-card:hover .ing-name {
-            color: var(--primary-green);
-        }
-
-        /* PROCESS SECTION */
-        .process-steps {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .step {
-            display: flex;
-            align-items: center;
-            background: white;
-            padding: 15px;
-            border-radius: 50px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            position: relative;
-            border-left: 3px solid transparent;
-            border-bottom: 3px solid transparent;
-            transition: all 0.3s ease;
-        }
-
-        .step:hover {
-            border-left-color: #4CAF50;
-            border-bottom-color: #4CAF50;
-            box-shadow: 0 5px 15px rgba(46, 125, 50, 0.2);
-            transform: translateX(5px);
-        }
-
-        .step-number {
-            background: var(--primary-green);
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-right: 15px;
-            flex-shrink: 0;
-        }
-
-        .step-content h4 {
-            color: var(--accent-orange);
-            margin-bottom: 2px;
-        }
-
-        .step-content p {
-            font-size: 0.9rem;
-        }
-
-        /* BENEFITS SECTION */
-        .benefits-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .benefit-item {
-            display: flex;
-            align-items: flex-start;
-            background: white;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-            transition: all 0.4s ease;
-            border: 2px solid transparent;
-        }
-
-        .benefit-item:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 12px 25px rgba(46, 125, 50, 0.25);
-            border-color: #4CAF50;
-        }
-
-        .benefit-icon {
-            width: 50px;
-            height: 50px;
-            margin-right: 15px;
-            flex-shrink: 0;
-            transition: transform 0.4s ease;
-        }
-
-        .benefit-item:hover .benefit-icon {
-            transform: scale(1.2) rotate(5deg);
-        }
-
-        /* SCIENCE CORNER */
-        .science-corner {
-            background: #FFF3E0;
-            padding: 30px;
-            border-radius: 15px;
-            margin-top: 40px;
-            border: 2px dashed var(--accent-orange);
-        }
-
-        .science-corner h3 {
-            color: var(--accent-orange);
-            margin-bottom: 10px;
-            font-size: 1.5rem;
-        }
-
-        .science-flow {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin: 30px 0;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .flow-step {
-            flex: 1;
-            min-width: 120px;
-            background: white;
-            padding: 20px 15px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: all 0.4s ease;
-            border: 2px solid transparent;
-        }
-
-        .flow-step:hover {
-            transform: translateY(-10px) scale(1.05);
-            box-shadow: 0 8px 20px rgba(255, 111, 0, 0.3);
-            border-color: var(--accent-orange);
-        }
-
-        .flow-icon {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            transition: transform 0.4s ease;
-        }
-
-        .flow-step:hover .flow-icon {
-            transform: scale(1.3) rotate(10deg);
-        }
-
-        .flow-title {
-            font-weight: bold;
-            color: var(--primary-green);
-            margin-bottom: 8px;
-            font-size: 1rem;
-        }
-
-        .flow-desc {
-            font-size: 0.85rem;
-            color: #555;
-            line-height: 1.4;
-        }
-
-        .flow-arrow {
-            font-size: 2rem;
-            color: var(--accent-orange);
-            font-weight: bold;
-            margin: 0 5px;
-            animation: arrowPulse 2s ease-in-out infinite;
-        }
-
-        @keyframes arrowPulse {
-            0%, 100% { 
-                opacity: 0.6;
-                transform: translateX(0);
-            }
-            50% { 
-                opacity: 1;
-                transform: translateX(5px);
-            }
-        }
-
-        .science-details {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 25px;
-            border-left: 4px solid var(--primary-green);
-        }
-
-        .detail-list {
-            margin-top: 15px;
-        }
-
-        .detail-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 12px;
-            padding: 12px;
-            background: #F1F8E9;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .detail-item:hover {
-            background: #DCEDC8;
-            transform: translateX(5px);
-        }
-
-        .detail-number {
-            font-size: 1.3rem;
-            margin-right: 12px;
-            flex-shrink: 0;
-        }
-
-        .detail-text {
-            font-size: 0.95rem;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        /* VIDEO SECTION */
-        .video-section {
-            margin-top: 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-            background: linear-gradient(to bottom, transparent, #F1F8E9);
-            padding: 30px;
-            border-radius: 20px;
-            position: relative;
-        }
-        
-        .video-section::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: linear-gradient(to bottom, #4CAF50, #81C784);
-            transform: translateX(-50%);
-            z-index: 0;
-        }
-
-        .video-container {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            background: #000;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            position: relative;
-            border: 5px solid #4CAF50;
-            outline: 3px solid #FF6F00;
-            outline-offset: 3px;
-            transition: all 0.3s ease;
-            z-index: 1;
-        }
-
-        .video-container:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(46, 125, 50, 0.4);
-            border-color: #66BB6A;
-        }
-        
-        .video-container::after {
-            content: '';
-            position: absolute;
-            bottom: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 0;
-            border-left: 20px solid transparent;
-            border-right: 20px solid transparent;
-            border-top: 20px solid #4CAF50;
-            z-index: 2;
-            animation: arrowBounce 2s ease-in-out infinite;
-        }
-        
-        @keyframes arrowBounce {
-            0%, 100% {
-                bottom: -25px;
-                opacity: 1;
-            }
-            50% {
-                bottom: -30px;
-                opacity: 0.7;
-            }
-        }
-
-        .video-placeholder {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            padding: 40px;
-            text-align: center;
-        }
-
-        .play-button {
-            width: 100px;
-            height: 100px;
-            margin-bottom: 25px;
-            animation: pulse 2s ease-in-out infinite;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .play-button:hover {
-            transform: scale(1.1);
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-                opacity: 0.9;
-            }
-            50% {
-                transform: scale(1.05);
-                opacity: 1;
-            }
-        }
-
-        .video-instruction {
-            color: white;
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .video-example {
-            color: #aaa;
-            font-size: 0.85rem;
-            font-family: 'Courier New', monospace;
-            background: rgba(255,255,255,0.1);
-            padding: 10px 15px;
-            border-radius: 5px;
-            max-width: 90%;
-            word-wrap: break-word;
-        }
-
-        .video-topics {
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-left: 5px solid #4CAF50;
-            border-top: 3px dashed #4CAF50;
-            margin-top: 30px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .video-topics::before {
-            content: '↓ Nội dung bên trong video ↓';
-            position: absolute;
-            top: -35px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #4CAF50;
-            color: white;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            white-space: nowrap;
-            box-shadow: 0 3px 10px rgba(46, 125, 50, 0.3);
-        }
-
-        .topics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 15px;
-        }
-
-        .topic-card {
-            background: linear-gradient(135deg, #F1F8E9 0%, #E8F5E9 100%);
-            padding: 20px 15px;
-            border-radius: 12px;
-            text-align: center;
-            transition: all 0.4s ease;
-            border: 2px solid transparent;
-            cursor: pointer;
-            position: relative;
-        }
-
-        .topic-card:hover {
-            transform: translateY(-8px) scale(1.03);
-            border-color: #4CAF50;
-            box-shadow: 0 10px 25px rgba(46, 125, 50, 0.2);
-        }
-        
-        .topic-card::after {
-            content: '▶';
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            color: #4CAF50;
-            font-size: 0.9rem;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .topic-card:hover::after {
-            opacity: 1;
-        }
-
-        .topic-icon {
-            font-size: 2.5rem;
-            margin-bottom: 12px;
-            transition: transform 0.4s ease;
-        }
-
-        .topic-card:hover .topic-icon {
-            transform: scale(1.2) rotate(10deg);
-        }
-
-        .topic-title {
-            font-size: 1rem;
-            font-weight: bold;
-            color: #2E7D32;
-            margin-bottom: 8px;
-        }
-
-        .topic-desc {
-            font-size: 0.85rem;
-            color: #555;
-            line-height: 1.4;
-        }
-        
-        .timestamp-hint {
-            font-size: 0.7rem;
-            color: #FF6F00;
-            margin-top: 8px;
-            font-style: italic;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .topic-card:hover .timestamp-hint {
-            opacity: 1;
-        }
-
-        /* FOOTER */
-        footer {
-            background: var(--text-dark);
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: auto;
-        }
-
-        footer p {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-
-        /* Responsive Adjustments */
-        @media (max-width: 600px) {
-            h1 { font-size: 1.8rem; }
-            .benefits-container { grid-template-columns: 1fr; }
-            .content { padding: 20px; }
-            .hero-background { width: 100%; }
-            .story-header h3 { font-size: 1.5rem; }
-            .project-intro { padding: 20px; }
-            .intro-item p { margin-left: 0; }
-            .stats-grid { 
-                grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
-            }
-            .stat-circle {
-                width: 80px;
-                height: 80px;
-            }
-            .stat-inner {
-                width: 60px;
-                height: 60px;
-            }
-            .stat-number {
-                font-size: 1.2rem;
-            }
-            .video-placeholder {
-                padding: 20px;
-            }
-            .play-button {
-                width: 70px;
-                height: 70px;
-            }
-            .video-instruction {
-                font-size: 1rem;
-            }
-            .video-example {
-                font-size: 0.7rem;
-            }
-            .topics-grid {
-                grid-template-columns: 1fr;
-            }
-            .video-topics {
-                padding: 20px;
-            }
-        }
-
-        /* Print settings for A3 */
-        @media print {
-            body {
-                background: none;
-                padding: 0;
-            }
-            .infographic-container {
-                width: 100%;
-                max-width: none;
-                box-shadow: none;
-            }
-            header, .step-number, .school-badge {
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-        }
-    </style>
-  <style>@view-transition { navigation: auto; }</style>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
-  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
- </head>
+         }
+ 
+         .stat-card {
+             text-align: center;
+             padding: 20px 15px;
+             background: white;
+             border-radius: 15px;
+             box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+             transition: transform 0.3s ease;
+         }
+ 
+         .stat-card:hover {
+             transform: translateY(-5px);
+         }
+ 
+         .stat-circle {
+             width: 100px;
+             height: 100px;
+             border-radius: 50%;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             margin: 0 auto 15px auto;
+             position: relative;
+         }
+ 
+         .stat-inner {
+             width: 75px;
+             height: 75px;
+             border-radius: 50%;
+             background: white;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+         }
+ 
+         .stat-number {
+             font-size: 1.5rem;
+             font-weight: 800;
+             color: var(--primary-green);
+         }
+ 
+         .stat-label {
+             font-size: 0.9rem;
+             color: #555;
+             font-weight: 600;
+         }
+ 
+         /* INGREDIENTS SECTION */
+         .section-title {
+             font-size: 1.5rem;
+             color: var(--primary-green);
+             border-bottom: 2px solid var(--accent-orange);
+             display: inline-block;
+             margin-bottom: 20px;
+             padding-bottom: 5px;
+             margin-top: 30px;
+             text-transform: uppercase;
+             font-weight: 700;
+         }
+ 
+         .ingredients-grid {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+             gap: 20px;
+             margin-bottom: 30px;
+         }
+ 
+         .ingredient-card {
+             background: white;
+             padding: 15px;
+             border-radius: 10px;
+             text-align: center;
+             box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+             transition: all 0.4s ease;
+             border: 1px solid #e0e0e0;
+             position: relative;
+             overflow: hidden;
+         }
+ 
+         .ingredient-card::before {
+             content: '';
+             position: absolute;
+             top: 0;
+             left: -100%;
+             width: 100%;
+             height: 100%;
+             background: linear-gradient(90deg, transparent, rgba(76, 175, 80, 0.15), transparent);
+             transition: left 0.5s ease;
+         }
+ 
+         .ingredient-card:hover {
+             transform: translateY(-10px) scale(1.05);
+             box-shadow: 0 10px 25px rgba(46, 125, 50, 0.3);
+             border-color: #4CAF50;
+         }
+ 
+         .ingredient-card:hover::before {
+             left: 100%;
+         }
+ 
+         .ing-icon {
+             width: 60px;
+             height: 60px;
+             margin: 0 auto 10px auto;
+             display: block;
+             transition: transform 0.3s ease;
+         }
+ 
+         .ingredient-card:hover .ing-icon {
+             transform: scale(1.15);
+         }
+ 
+         .ing-name {
+             font-weight: 700;
+             color: var(--text-dark);
+             transition: color 0.3s ease;
+         }
+ 
+         .ingredient-card:hover .ing-name {
+             color: var(--primary-green);
+         }
+ 
+         /* PROCESS SECTION */
+         .process-steps {
+             display: flex;
+             flex-direction: column;
+             gap: 15px;
+         }
+ 
+         .step {
+             display: flex;
+             align-items: center;
+             background: white;
+             padding: 15px;
+             border-radius: 50px;
+             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+             position: relative;
+             border-left: 3px solid transparent;
+             border-bottom: 3px solid transparent;
+             transition: all 0.3s ease;
+         }
+ 
+         .step:hover {
+             border-left-color: #4CAF50;
+             border-bottom-color: #4CAF50;
+             box-shadow: 0 5px 15px rgba(46, 125, 50, 0.2);
+             transform: translateX(5px);
+         }
+ 
+         .step-number {
+             background: var(--primary-green);
+             color: white;
+             width: 40px;
+             height: 40px;
+             border-radius: 50%;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             font-weight: 700;
+             font-size: 1.2rem;
+             margin-right: 15px;
+             flex-shrink: 0;
+         }
+ 
+         .step-content h4 {
+             color: var(--accent-orange);
+             margin-bottom: 2px;
+             font-weight: 700;
+         }
+ 
+         .step-content p {
+             font-size: 0.9rem;
+         }
+ 
+         /* BENEFITS SECTION */
+         .benefits-container {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+             gap: 20px;
+             margin-top: 20px;
+         }
+ 
+         .benefit-item {
+             display: flex;
+             align-items: flex-start;
+             background: white;
+             padding: 20px;
+             border-radius: 15px;
+             box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+             transition: all 0.4s ease;
+             border: 2px solid transparent;
+         }
+ 
+         .benefit-item:hover {
+             transform: translateY(-8px) scale(1.02);
+             box-shadow: 0 12px 25px rgba(46, 125, 50, 0.25);
+             border-color: #4CAF50;
+         }
+ 
+         .benefit-icon {
+             width: 50px;
+             height: 50px;
+             margin-right: 15px;
+             flex-shrink: 0;
+             transition: transform 0.4s ease;
+         }
+ 
+         .benefit-item:hover .benefit-icon {
+             transform: scale(1.2) rotate(5deg);
+         }
+ 
+         /* SCIENCE CORNER */
+         .science-corner {
+             background: #FFF3E0;
+             padding: 30px;
+             border-radius: 15px;
+             margin-top: 40px;
+             border: 2px dashed var(--accent-orange);
+         }
+ 
+         .science-corner h3 {
+             color: var(--accent-orange);
+             margin-bottom: 10px;
+             font-size: 1.5rem;
+             font-weight: 700;
+         }
+ 
+         .science-flow {
+             display: flex;
+             align-items: center;
+             justify-content: space-between;
+             margin: 30px 0;
+             flex-wrap: wrap;
+             gap: 10px;
+         }
+ 
+         .flow-step {
+             flex: 1;
+             min-width: 120px;
+             background: white;
+             padding: 20px 15px;
+             border-radius: 15px;
+             text-align: center;
+             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+             transition: all 0.4s ease;
+             border: 2px solid transparent;
+         }
+ 
+         .flow-step:hover {
+             transform: translateY(-10px) scale(1.05);
+             box-shadow: 0 8px 20px rgba(255, 111, 0, 0.3);
+             border-color: var(--accent-orange);
+         }
+ 
+         .flow-icon {
+             font-size: 2.5rem;
+             margin-bottom: 10px;
+             transition: transform 0.4s ease;
+         }
+ 
+         .flow-step:hover .flow-icon {
+             transform: scale(1.3) rotate(10deg);
+         }
+ 
+         .flow-title {
+             font-weight: 700;
+             color: var(--primary-green);
+             margin-bottom: 8px;
+             font-size: 1rem;
+         }
+ 
+         .flow-desc {
+             font-size: 0.85rem;
+             color: #555;
+             line-height: 1.4;
+         }
+ 
+         .flow-arrow {
+             font-size: 2rem;
+             color: var(--accent-orange);
+             font-weight: 700;
+             margin: 0 5px;
+             animation: arrowPulse 2s ease-in-out infinite;
+         }
+ 
+         @keyframes arrowPulse {
+             0%, 100% { 
+                 opacity: 0.6;
+                 transform: translateX(0);
+             }
+             50% { 
+                 opacity: 1;
+                 transform: translateX(5px);
+             }
+         }
+ 
+         .science-details {
+             background: white;
+             padding: 20px;
+             border-radius: 10px;
+             margin-top: 25px;
+             border-left: 4px solid var(--primary-green);
+         }
+ 
+         .detail-list {
+             margin-top: 15px;
+         }
+ 
+         .detail-item {
+             display: flex;
+             align-items: flex-start;
+             margin-bottom: 12px;
+             padding: 12px;
+             background: #F1F8E9;
+             border-radius: 8px;
+             transition: all 0.3s ease;
+         }
+ 
+         .detail-item:hover {
+             background: #DCEDC8;
+             transform: translateX(5px);
+         }
+ 
+         .detail-number {
+             font-size: 1.3rem;
+             margin-right: 12px;
+             flex-shrink: 0;
+         }
+ 
+         .detail-text {
+             font-size: 0.95rem;
+             line-height: 1.6;
+             color: #333;
+         }
+ 
+         /* VIDEO SECTION */
+         .video-section {
+             margin-top: 30px;
+             display: flex;
+             flex-direction: column;
+             gap: 30px;
+         }
+ 
+         .video-container {
+             width: 100%;
+             aspect-ratio: 16 / 9;
+             background: #000;
+             border-radius: 15px;
+             overflow: hidden;
+             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+             position: relative;
+         }
+ 
+         .video-container iframe {
+             width: 100%;
+             height: 100%;
+         }
+ 
+         .video-topics {
+             background: white;
+             padding: 30px;
+             border-radius: 15px;
+             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+         }
+ 
+         .topics-grid {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+             gap: 20px;
+         }
+ 
+         .topic-card {
+             background: linear-gradient(135deg, #F1F8E9 0%, #E8F5E9 100%);
+             padding: 25px 20px;
+             border-radius: 12px;
+             text-align: center;
+             transition: all 0.4s ease;
+             border: 2px solid transparent;
+         }
+ 
+         .topic-card:hover {
+             transform: translateY(-8px) scale(1.03);
+             border-color: #4CAF50;
+             box-shadow: 0 10px 25px rgba(46, 125, 50, 0.2);
+         }
+ 
+         .topic-icon {
+             font-size: 3rem;
+             margin-bottom: 15px;
+             transition: transform 0.4s ease;
+         }
+ 
+         .topic-card:hover .topic-icon {
+             transform: scale(1.2) rotate(10deg);
+         }
+ 
+         .topic-title {
+             font-size: 1.1rem;
+             font-weight: 700;
+             color: #2E7D32;
+             margin-bottom: 10px;
+         }
+ 
+         .topic-desc {
+             font-size: 0.9rem;
+             color: #555;
+             line-height: 1.5;
+         }
+ 
+         /* TEAM SECTION */
+         .team-section {
+             background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+             padding: 4rem 2rem;
+             margin: 4rem -40px 0;
+             border-radius: 20px;
+         }
+ 
+         .section-header {
+             text-align: center;
+             max-width: 700px;
+             margin: 0 auto 3rem;
+         }
+ 
+         .section-badge {
+             display: inline-flex;
+             align-items: center;
+             gap: 0.5rem;
+             background: var(--primary-light);
+             color: var(--primary);
+             padding: 0.375rem 1rem;
+             border-radius: 9999px;
+             font-size: 0.8125rem;
+             font-weight: 600;
+             text-transform: uppercase;
+             letter-spacing: 0.05em;
+             margin-bottom: 1rem;
+         }
+ 
+         .section-title-main {
+             font-size: 2rem;
+             color: var(--text-primary);
+             margin-bottom: 1rem;
+             font-weight: 700;
+         }
+ 
+         .section-description {
+             font-size: 1.0625rem;
+             color: var(--text-secondary);
+             line-height: 1.7;
+         }
+ 
+         .team-grid {
+             display: grid;
+             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+             gap: 1.5rem;
+             margin-bottom: 3rem;
+         }
+ 
+         .team-card {
+             background: white;
+             border-radius: 16px;
+             overflow: hidden;
+             box-shadow: var(--shadow);
+             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+             border: 1px solid var(--border);
+         }
+ 
+         .team-card:hover {
+             transform: translateY(-4px);
+             box-shadow: var(--shadow-xl);
+             border-color: var(--primary);
+         }
+ 
+         .team-card-header {
+             background: linear-gradient(135deg, var(--bg-light) 0%, white 100%);
+             padding: 2rem 1.5rem 1.5rem;
+             text-align: center;
+             border-bottom: 1px solid var(--border);
+         }
+ 
+         .team-avatar {
+             width: 80px;
+             height: 80px;
+             margin: 0 auto 1rem;
+             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+             border-radius: 50%;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             font-size: 2.5rem;
+             box-shadow: var(--shadow-lg);
+             border: 4px solid white;
+         }
+ 
+         .team-name {
+             font-size: 1.125rem;
+             font-weight: 600;
+             color: var(--text-primary);
+             margin-bottom: 0.5rem;
+         }
+ 
+         .team-role {
+             display: inline-block;
+             background: var(--accent);
+             color: white;
+             padding: 0.25rem 0.75rem;
+             border-radius: 6px;
+             font-size: 0.75rem;
+             font-weight: 600;
+             text-transform: uppercase;
+             letter-spacing: 0.05em;
+         }
+ 
+         .team-card-body {
+             padding: 1.5rem;
+         }
+ 
+         .team-description {
+             font-size: 0.9375rem;
+             color: var(--text-secondary);
+             line-height: 1.6;
+         }
+ 
+         /* SUPERVISOR CARD */
+         .supervisor-wrapper {
+             background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+             border-radius: 20px;
+             padding: 3rem;
+             box-shadow: var(--shadow-lg);
+             position: relative;
+             overflow: hidden;
+         }
+ 
+         .supervisor-wrapper::before {
+             content: '';
+             position: absolute;
+             top: -50%;
+             right: -50%;
+             width: 100%;
+             height: 100%;
+             background: radial-gradient(circle, rgba(251, 191, 36, 0.15) 0%, transparent 70%);
+             pointer-events: none;
+         }
+ 
+         .supervisor-badge {
+             position: absolute;
+             top: 1.5rem;
+             right: 1.5rem;
+             background: var(--accent);
+             color: white;
+             padding: 0.5rem 1.25rem;
+             border-radius: 9999px;
+             font-size: 0.75rem;
+             font-weight: 700;
+             text-transform: uppercase;
+             letter-spacing: 0.05em;
+             box-shadow: var(--shadow-lg);
+             z-index: 10;
+         }
+ 
+         .supervisor-card {
+             background: white;
+             border-radius: 16px;
+             padding: 2.5rem;
+             box-shadow: var(--shadow-md);
+             display: grid;
+             grid-template-columns: auto 1fr;
+             gap: 2rem;
+             align-items: start;
+             position: relative;
+             border: 1px solid rgba(251, 191, 36, 0.3);
+         }
+ 
+         .supervisor-avatar {
+             width: 120px;
+             height: 120px;
+             background: linear-gradient(135deg, var(--accent) 0%, #F59E0B 100%);
+             border-radius: 50%;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             font-size: 4rem;
+             box-shadow: var(--shadow-xl);
+             border: 5px solid white;
+             flex-shrink: 0;
+         }
+ 
+         .supervisor-info h3 {
+             font-size: 1.5rem;
+             color: var(--text-primary);
+             margin-bottom: 0.5rem;
+             font-weight: 700;
+         }
+ 
+         .supervisor-title {
+             color: var(--accent);
+             font-weight: 600;
+             font-size: 0.9375rem;
+             margin-bottom: 1rem;
+             display: flex;
+             align-items: center;
+             gap: 0.5rem;
+         }
+ 
+         .supervisor-description {
+             color: var(--text-secondary);
+             line-height: 1.7;
+             margin-bottom: 1.25rem;
+         }
+ 
+         .supervisor-credentials {
+             display: flex;
+             flex-wrap: wrap;
+             gap: 1rem;
+         }
+ 
+         .credential-badge {
+             display: inline-flex;
+             align-items: center;
+             gap: 0.375rem;
+             background: var(--bg-light);
+             padding: 0.375rem 0.875rem;
+             border-radius: 6px;
+             font-size: 0.8125rem;
+             color: var(--text-secondary);
+             font-weight: 500;
+             border: 1px solid var(--border);
+         }
+ 
+         .credential-badge::before {
+             content: '✓';
+             color: var(--primary);
+             font-weight: 700;
+         }
+ 
+         /* PRODUCTS SECTION */
+         .products-section {
+             background: var(--bg-light);
+             padding: 4rem 2rem;
+             margin: 4rem -40px 0;
+             border-radius: 20px;
+         }
+ 
+         .products-grid {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+             gap: 2rem;
+             margin-bottom: 4rem;
+         }
+ 
+         .product-card {
+             background: white;
+             border-radius: 16px;
+             overflow: hidden;
+             box-shadow: var(--shadow);
+             border: 1px solid var(--border);
+             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+             display: flex;
+             flex-direction: column;
+             position: relative;
+         }
+ 
+         .product-card:hover {
+             transform: translateY(-8px);
+             box-shadow: var(--shadow-xl);
+             border-color: var(--primary);
+         }
+ 
+         .product-badge {
+             position: absolute;
+             top: 1.25rem;
+             right: 1.25rem;
+             background: var(--accent);
+             color: white;
+             padding: 0.375rem 0.875rem;
+             border-radius: 9999px;
+             font-size: 0.6875rem;
+             font-weight: 700;
+             text-transform: uppercase;
+             letter-spacing: 0.05em;
+             box-shadow: var(--shadow-md);
+             z-index: 10;
+         }
+ 
+         .product-header {
+             background: linear-gradient(135deg, var(--primary-light) 0%, #ECFDF5 100%);
+             padding: 2.5rem 2rem;
+             text-align: center;
+             border-bottom: 1px solid var(--border);
+         }
+ 
+         .product-icon {
+             font-size: 3rem;
+             margin-bottom: 1rem;
+             display: block;
+         }
+ 
+         .product-name {
+             font-size: 1.375rem;
+             font-weight: 700;
+             color: var(--text-primary);
+             margin-bottom: 0.5rem;
+         }
+ 
+         .product-subtitle {
+             font-size: 0.875rem;
+             color: var(--text-muted);
+             line-height: 1.5;
+         }
+ 
+         .product-body {
+             padding: 2rem;
+             flex: 1;
+             display: flex;
+             flex-direction: column;
+         }
+ 
+         .product-price {
+             text-align: center;
+             padding: 1.5rem 0;
+             margin-bottom: 1.5rem;
+             border-bottom: 2px solid var(--bg-light);
+         }
+ 
+         .price-amount {
+             font-size: 2.25rem;
+             font-weight: 700;
+             color: var(--primary);
+             margin-bottom: 0.25rem;
+         }
+ 
+         .price-label {
+             font-size: 0.8125rem;
+             color: var(--text-muted);
+             text-transform: uppercase;
+             letter-spacing: 0.05em;
+         }
+ 
+         .product-features {
+             list-style: none;
+             margin-bottom: 2rem;
+             flex: 1;
+         }
+ 
+         .product-features li {
+             padding: 0.75rem 0;
+             color: var(--text-secondary);
+             font-size: 0.9375rem;
+             display: flex;
+             align-items: flex-start;
+             gap: 0.75rem;
+             line-height: 1.6;
+         }
+ 
+         .product-features li::before {
+             content: '✓';
+             color: var(--primary);
+             font-weight: 700;
+             font-size: 1.125rem;
+             flex-shrink: 0;
+         }
+ 
+         .btn {
+             display: inline-flex;
+             align-items: center;
+             justify-content: center;
+             padding: 0.875rem 1.75rem;
+             border-radius: 10px;
+             font-size: 0.9375rem;
+             font-weight: 600;
+             text-decoration: none;
+             transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+             cursor: pointer;
+             border: none;
+             text-transform: uppercase;
+             letter-spacing: 0.025em;
+         }
+ 
+         .btn-primary {
+             background: var(--primary);
+             color: white;
+             box-shadow: var(--shadow-sm);
+         }
+ 
+         .btn-primary:hover {
+             background: var(--primary-dark);
+             box-shadow: var(--shadow-lg);
+             transform: translateY(-2px);
+         }
+ 
+         .btn-block {
+             width: 100%;
+         }
+ 
+         /* ORDER FORM */
+         .order-section {
+             background: linear-gradient(135deg, #E0F2FE 0%, #BAE6FD 100%);
+             padding: 4rem 2rem;
+             border-radius: 20px;
+             margin: 4rem -40px 0;
+         }
+ 
+         .order-container {
+             max-width: 800px;
+             margin: 0 auto;
+         }
+ 
+         .form-card {
+             background: white;
+             border-radius: 16px;
+             padding: 3rem;
+             box-shadow: var(--shadow-lg);
+             border: 1px solid rgba(8, 145, 178, 0.2);
+         }
+ 
+         .form-header {
+             text-align: center;
+             margin-bottom: 2.5rem;
+         }
+ 
+         .form-header h3 {
+             font-size: 1.875rem;
+             color: var(--text-primary);
+             margin-bottom: 0.5rem;
+             font-weight: 700;
+         }
+ 
+         .form-header p {
+             color: var(--text-secondary);
+             font-size: 0.9375rem;
+         }
+ 
+         .form-group {
+             margin-bottom: 1.5rem;
+         }
+ 
+         .form-label {
+             display: block;
+             color: var(--text-primary);
+             font-weight: 600;
+             margin-bottom: 0.5rem;
+             font-size: 0.875rem;
+         }
+ 
+         .required {
+             color: #EF4444;
+             margin-left: 0.25rem;
+         }
+ 
+         .form-input,
+         .form-select,
+         .form-textarea {
+             width: 100%;
+             padding: 0.875rem 1rem;
+             border: 2px solid var(--border);
+             border-radius: 10px;
+             font-size: 0.9375rem;
+             font-family: inherit;
+             transition: all 0.2s ease;
+             background: var(--bg-light);
+         }
+ 
+         .form-input:focus,
+         .form-select:focus,
+         .form-textarea:focus {
+             outline: none;
+             border-color: var(--secondary);
+             background: white;
+             box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.1);
+         }
+ 
+         .form-textarea {
+             resize: vertical;
+             min-height: 100px;
+         }
+ 
+         .form-row {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+             gap: 1.5rem;
+         }
+ 
+         .contact-cards {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+             gap: 1.5rem;
+             margin-top: 3rem;
+         }
+ 
+         .contact-card {
+             background: white;
+             border: 1px solid var(--border);
+             border-radius: 12px;
+             padding: 1.5rem;
+             text-align: center;
+             transition: all 0.3s ease;
+         }
+ 
+         .contact-card:hover {
+             border-color: var(--secondary);
+             box-shadow: var(--shadow-md);
+             transform: translateY(-2px);
+         }
+ 
+         .contact-icon {
+             font-size: 2rem;
+             margin-bottom: 0.75rem;
+             display: block;
+         }
+ 
+                                    .contact-label {
+                                        font-size: 0.75rem;
+                                        color: var(--text-muted);
+                                        text-transform: uppercase;
+                                        letter-spacing: 0.05em;
+                                        margin-bottom: 0.5rem;
+                                        font-weight: 600;
+                                    }
+                            
+                                    .contact-value {
+                                        color: var(--text-primary);
+                                        font-weight: 600;
+                                        font-size: 0.9375rem;
+                                    }
+                            
+                                    /* FOOTER */
+                                    footer {
+                                        background: var(--text-dark);
+                                        color: white;
+                                        text-align: center;
+                                        padding: 20px;
+                                        margin-top: auto;
+                                    }
+                            
+                                    footer p {
+                                        font-size: 0.9rem;
+                                        opacity: 0.8;
+                                    }
+                            
+                                    /* Responsive Adjustments */
+                                    @media (max-width: 1024px) {
+                                        .supervisor-card {
+                                            grid-template-columns: 1fr;
+                                            text-align: center;
+                                            gap: 1.5rem;
+                                        }
+                            
+                                        .supervisor-avatar {
+                                            margin: 0 auto;
+                                        }
+                            
+                                        .supervisor-title {
+                                            justify-content: center;
+                                        }
+                            
+                                        .supervisor-credentials {
+                                            justify-content: center;
+                                        }
+                                    }
+                            
+                                    @media (max-width: 768px) {
+                                        h1 { font-size: 1.8rem; }
+                                        .benefits-container { grid-template-columns: 1fr; }
+                                        .content { padding: 20px; }
+                                        .hero-background { width: 100%; }
+                                        .story-header h3 { font-size: 1.5rem; }
+                                        .project-intro { padding: 20px; }
+                                        .intro-item p { margin-left: 0; }
+                                        .stats-grid { 
+                                            grid-template-columns: repeat(2, 1fr);
+                                            gap: 15px;
+                                        }
+                                        .stat-circle {
+                                            width: 80px;
+                                            height: 80px;
+                                        }
+                                        .stat-inner {
+                                            width: 60px;
+                                            height: 60px;
+                                        }
+                                        .stat-number {
+                                            font-size: 1.2rem;
+                                        }
+                                        .topics-grid {
+                                            grid-template-columns: 1fr;
+                                        }
+                                        .video-topics {
+                                            padding: 20px;
+                                        }
+                                        .team-section,
+                                        .products-section,
+                                        .order-section {
+                                            padding: 3rem 1.5rem;
+                                            margin-left: -20px;
+                                            margin-right: -20px;
+                                        }
+                                        .section-title-main {
+                                            font-size: 1.75rem;
+                                        }
+                                        .team-grid {
+                                            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                                            gap: 1.25rem;
+                                        }
+                                        .products-grid {
+                                            grid-template-columns: 1fr;
+                                        }
+                                        .form-card {
+                                            padding: 2rem 1.5rem;
+                                        }
+                                        .supervisor-wrapper {
+                                            padding: 2rem 1.5rem;
+                                        }
+                                        .supervisor-badge {
+                                            position: static;
+                                            display: inline-block;
+                                            margin-bottom: 1.5rem;
+                                        }
+                                        .science-flow {
+                                            flex-direction: column;
+                                        }
+                                        .flow-arrow {
+                                            transform: rotate(90deg);
+                                        }
+                                    }
+                            
+                                    @media (max-width: 480px) {
+                                        .section-title-main {
+                                            font-size: 1.5rem;
+                                        }
+                                        .team-grid {
+                                            grid-template-columns: 1fr;
+                                        }
+                                        .form-row {
+                                            grid-template-columns: 1fr;
+                                        }
+                                        .stats-grid {
+                                            grid-template-columns: 1fr;
+                                        }
+                                        .ingredients-grid {
+                                            grid-template-columns: repeat(2, 1fr);
+                                        }
+                                    }
+                            
+                                    /* Print settings for A3 */
+                                    @media print {
+                                        body {
+                                            background: none;
+                                            padding: 0;
+                                        }
+                                        .infographic-container {
+                                            width: 100%;
+                                            max-width: none;
+                                            box-shadow: none;
+                                        }
+                                        header, .step-number, .school-badge {
+                                            -webkit-print-color-adjust: exact;
+                                            print-color-adjust: exact;
+                                        }
+                                    }
+                            
+                                    /* ANIMATIONS */
+                                    @keyframes fadeInUp {
+                                        from {
+                                            opacity: 0;
+                                            transform: translateY(20px);
+                                        }
+                                        to {
+                                            opacity: 1;
+                                            transform: translateY(0);
+                                        }
+                                    }
+                            
+                                    .animate-in {
+                                        animation: fadeInUp 0.6s ease-out forwards;
+                                    }
+                            
+                                    @keyframes fadeIn {
+                                        from { opacity: 0; }
+                                        to { opacity: 1; }
+                                    }
+                                    .supervisor-avatar img {
+                                        width: 100px;          /* chỉnh kích thước */
+                                        height: 100px;
+                                        border-radius: 50%;    /* bo tròn */
+                                        object-fit: cover;     /* ảnh giữ tỷ lệ */
+                                        border: 3px solid #fff;  /* viền trắng (tùy chọn) */
+                                        box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* bóng đẹp */
+                                    }
+
+                                </style>
+                            </head>
  <body>
-  <div class="infographic-container"><!-- Decorative Background Leaves -->
-   <svg class="bg-leaf" style="top: 100px; left: -50px; width: 300px;" viewbox="0 0 100 100"><path d="M50 100 Q30 80 10 50 Q30 20 50 0 Q70 20 90 50 Q70 80 50 100 Z" fill="#2E7D32" />
-   </svg>
-   <svg class="bg-leaf" style="bottom: 200px; right: -50px; width: 400px; transform: rotate(180deg);" viewbox="0 0 100 100"><path d="M50 100 Q30 80 10 50 Q30 20 50 0 Q70 20 90 50 Q70 80 50 100 Z" fill="#2E7D32" />
-   </svg>
-   <header>
-    <div class="school-badge">
-     THPT Hùng Vương - Đắk Lắk
-    </div>
-    <h1>Thuốc Trừ Sâu Sinh Học</h1>
-    <h2>Chế phẩm từ lá đu đủ - Giải pháp xanh cho nông nghiệp</h2>
-   </header>
-   <div class="content"><!-- Hero Section with Background -->
-    <div class="hero-section"><!-- Background Illustration -->
-     <div class="hero-background"><!-- Papaya Leaves Background -->
-      <svg class="papaya-leaf-bg papaya-leaf-1" viewbox="0 0 100 150" xmlns="http://www.w3.org/2000/svg"><path d="M50 10 L50 140 M50 10 L20 40 M50 10 L80 40 M50 40 L25 70 M50 40 L75 70 M50 80 L20 110 M50 80 L80 110" stroke="#2E7D32" stroke-width="3" fill="none" /> <ellipse cx="50" cy="70" rx="35" ry="60" fill="#4CAF50" opacity="0.6" />
-      </svg>
-      <svg class="papaya-leaf-bg papaya-leaf-2" viewbox="0 0 100 150" xmlns="http://www.w3.org/2000/svg"><path d="M50 10 L50 140 M50 10 L20 40 M50 10 L80 40 M50 40 L25 70 M50 40 L75 70 M50 80 L20 110 M50 80 L80 110" stroke="#2E7D32" stroke-width="3" fill="none" /> <ellipse cx="50" cy="70" rx="35" ry="60" fill="#66BB6A" opacity="0.5" />
-      </svg>
-      <svg class="papaya-leaf-bg papaya-leaf-3" viewbox="0 0 100 150" xmlns="http://www.w3.org/2000/svg"><path d="M50 10 L50 140 M50 10 L20 40 M50 10 L80 40 M50 40 L25 70 M50 40 L75 70 M50 80 L20 110 M50 80 L80 110" stroke="#2E7D32" stroke-width="3" fill="none" /> <ellipse cx="50" cy="70" rx="35" ry="60" fill="#81C784" opacity="0.6" />
-      </svg><!-- Rice Field Background -->
-      <svg class="rice-field" viewbox="0 0 600 150" xmlns="http://www.w3.org/2000/svg"><!-- Rice plants --> <g class="rice-plant" style="animation-delay: 0s;">
-        <path d="M50 150 L50 80 M50 80 L45 90 M50 80 L55 90 M50 80 L48 100 M50 80 L52 100" stroke="#558B2F" stroke-width="2" fill="none" />
-        <circle cx="45" cy="85" r="3" fill="#FDD835" />
-        <circle cx="55" cy="85" r="3" fill="#FDD835" />
-       </g> <g class="rice-plant" style="animation-delay: 0.5s;">
-        <path d="M120 150 L120 90 M120 90 L115 100 M120 90 L125 100 M120 90 L118 110 M120 90 L122 110" stroke="#558B2F" stroke-width="2" fill="none" />
-        <circle cx="115" cy="95" r="3" fill="#FDD835" />
-        <circle cx="125" cy="95" r="3" fill="#FDD835" />
-       </g> <g class="rice-plant" style="animation-delay: 1s;">
-        <path d="M200 150 L200 70 M200 70 L195 80 M200 70 L205 80 M200 70 L198 90 M200 70 L202 90" stroke="#558B2F" stroke-width="2" fill="none" />
-        <circle cx="195" cy="75" r="3" fill="#FDD835" />
-        <circle cx="205" cy="75" r="3" fill="#FDD835" />
-       </g> <g class="rice-plant" style="animation-delay: 1.5s;">
-        <path d="M280 150 L280 85 M280 85 L275 95 M280 85 L285 95 M280 85 L278 105 M280 85 L282 105" stroke="#558B2F" stroke-width="2" fill="none" />
-        <circle cx="275" cy="90" r="3" fill="#FDD835" />
-        <circle cx="285" cy="90" r="3" fill="#FDD835" />
-       </g> <g class="rice-plant" style="animation-delay: 2s;">
-        <path d="M360 150 L360 75 M360 75 L355 85 M360 75 L365 85 M360 75 L358 95 M360 75 L362 95" stroke="#558B2F" stroke-width="2" fill="none" />
-        <circle cx="355" cy="80" r="3" fill="#FDD835" />
-        <circle cx="365" cy="80" r="3" fill="#FDD835" />
-       </g> <g class="rice-plant" style="animation-delay: 0.3s;">
-        <path d="M440 150 L440 80 M440 80 L435 90 M440 80 L445 90 M440 80 L438 100 M440 80 L442 100" stroke="#558B2F" stroke-width="2" fill="none" />
-        <circle cx="435" cy="85" r="3" fill="#FDD835" />
-        <circle cx="445" cy="85" r="3" fill="#FDD835" />
-       </g> <g class="rice-plant" style="animation-delay: 1.2s;">
-        <path d="M520 150 L520 90 M520 90 L515 100 M520 90 L525 100 M520 90 L518 110 M520 90 L522 110" stroke="#558B2F" stroke-width="2" fill="none" />
-        <circle cx="515" cy="95" r="3" fill="#FDD835" />
-        <circle cx="525" cy="95" r="3" fill="#FDD835" />
-       </g>
-      </svg>
-     </div><!-- Product Bottle -->
-     <div class="product-display">
-      <svg class="svg-bottle" viewbox="0 0 200 300" xmlns="http://www.w3.org/2000/svg"><!-- Cap --> <rect x="75" y="10" width="50" height="20" rx="5" fill="#37474F"></rect> <!-- Neck --> <rect x="85" y="30" width="30" height="20" fill="#90A4AE"></rect> <!-- Bottle Shape with animated liquid --> <defs>
-        <lineargradient id="liquidGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-         <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1"></stop>
-         <stop offset="50%" style="stop-color:#66BB6A;stop-opacity:1"></stop>
-         <stop offset="100%" style="stop-color:#81C784;stop-opacity:1"></stop>
-        </lineargradient>
-        <clippath id="bottleClip">
-         <path d="M60 50 L140 50 Q160 50 160 80 L160 280 Q160 300 140 300 L60 300 Q40 300 40 280 L40 80 Q40 50 60 50 Z" />
-        </clippath>
-       </defs> <!-- Liquid with wave animation --> <g clip-path="url(#bottleClip)">
-        <rect id="liquidFill" x="40" y="80" width="120" height="220" fill="url(#liquidGrad)"></rect> <!-- Wave effect on top of liquid -->
-        <path d="M40 80 Q60 75 80 80 T120 80 T160 80" fill="none" stroke="#81C784" stroke-width="2" opacity="0.5">
-         <animate attributename="d" values="M40 80 Q60 75 80 80 T120 80 T160 80;
-                                                 M40 80 Q60 85 80 80 T120 80 T160 80;
-                                                 M40 80 Q60 75 80 80 T120 80 T160 80" dur="2s" repeatcount="indefinite" />
-        </path>
-       </g> <!-- Bottle outline --> <path d="M60 50 L140 50 Q160 50 160 80 L160 280 Q160 300 140 300 L60 300 Q40 300 40 280 L40 80 Q40 50 60 50 Z" fill="none" stroke="#2E7D32" stroke-width="2" /> <!-- Label --> <rect x="45" y="100" width="110" height="120" rx="5" fill="#FFF"></rect> <rect x="45" y="100" width="110" height="25" rx="5" fill="#2E7D32"></rect> <text x="100" y="117" font-family="Arial" font-size="10" fill="white" text-anchor="middle" font-weight="bold">
-        BIO PESTICIDE
-       </text> <!-- Animated Papaya Leaf on Label --> <g>
-        <path d="M100 160 L100 130 M100 160 L80 140 M100 160 L120 140 M100 160 L70 155 M100 160 L130 155" stroke="#2E7D32" stroke-width="2">
-         <animatetransform attributename="transform" type="rotate" values="0 100 160; 3 100 160; 0 100 160; -3 100 160; 0 100 160" dur="4s" repeatcount="indefinite" />
-        </path>
-        <circle cx="100" cy="160" r="25" fill="#C8E6C9" opacity="0.5">
-         <animate attributename="opacity" values="0.5;0.7;0.5" dur="2s" repeatcount="indefinite" />
-        </circle>
-       </g> <text x="100" y="190" font-family="Arial" font-size="12" fill="#2E7D32" text-anchor="middle" font-weight="bold">
-        LÁ ĐU ĐỦ
-       </text> <text x="100" y="205" font-family="Arial" font-size="8" fill="#555" text-anchor="middle">
-        Sản phẩm STEM
-       </text> <!-- Sparkle effects --> <circle class="sparkle" cx="55" cy="70" r="2" fill="white" opacity="0.8" style="animation-delay: 0s;" /> <circle class="sparkle" cx="145" cy="100" r="2" fill="white" opacity="0.8" style="animation-delay: 0.5s;" /> <circle class="sparkle" cx="50" cy="150" r="2" fill="white" opacity="0.8" style="animation-delay: 1s;" /> <circle class="sparkle" cx="150" cy="200" r="2" fill="white" opacity="0.8" style="animation-delay: 1.5s;" /> <!-- Highlights/Reflections --> <path d="M50 60 Q50 55 60 55 L65 55" stroke="white" stroke-width="3" opacity="0.5" fill="none" /> <rect x="145" y="70" width="5" height="200" rx="2" fill="white" opacity="0.3"></rect>
-      </svg>
-     </div>
-     <div class="story-section">
-      <div class="story-header">
-       <h3>💡 Giới Thiệu Dự Án</h3>
-      </div>
-      <div class="project-intro">
-       <div class="intro-item">
-        <h4>📌 Thực trạng:</h4>
-        <p>Việc lạm dụng thuốc trừ sâu hóa học trong nông nghiệp đang gây ra những hậu quả nghiêm trọng đến sức khỏe con người và môi trường. Dư lượng hóa chất trong nông sản, ô nhiễm nguồn nước, và sự kháng thuốc của sâu bệnh đang trở thành vấn đề cấp bách.</p>
-       </div>
-       <div class="intro-item">
-        <h4>🎯 Lý do chọn đề tài:</h4>
-        <p>Nhận thấy tầm quan trọng của nông nghiệp bền vững và an toàn thực phẩm, nhóm nghiên cứu STEM Sinh Học của trường THPT Hùng Vương đã quyết định phát triển thuốc trừ sâu sinh học từ lá đu đủ - một nguồn nguyên liệu tự nhiên, dễ tìm, và có hiệu quả cao trong việc kiểm soát sâu hại.</p>
-       </div>
-       <div class="intro-item">
-        <h4>🚀 Mục tiêu:</h4>
-        <p>Chúng tôi không chỉ nghiên cứu và công bố kết quả khoa học, mà còn mong muốn thương mại hóa sản phẩm để đưa giải pháp này đến tay nông dân Việt Nam, góp phần xây dựng nền nông nghiệp xanh, sạch, và bền vững.</p>
-       </div>
-      </div>
-      <div class="stats-grid">
-       <div class="stat-card">
-        <div class="stat-circle" style="background: conic-gradient(#4CAF50 0% 100%, #E0E0E0 100% 100%);">
-         <div class="stat-inner">
-          <div class="stat-number">
-           100%
-          </div>
-         </div>
-        </div>
-        <div class="stat-label">
-         Tự Nhiên
-        </div>
-       </div>
-       <div class="stat-card">
-        <div class="stat-circle" style="background: conic-gradient(#2E7D32 0% 0%, #E0E0E0 0% 100%);">
-         <div class="stat-inner">
-          <div class="stat-number">
-           0
-          </div>
-         </div>
-        </div>
-        <div class="stat-label">
-         Hóa Chất Độc Hại
-        </div>
-       </div>
-       <div class="stat-card">
-        <div class="stat-circle" style="background: conic-gradient(#FF6F00 0% 95%, #E0E0E0 95% 100%);">
-         <div class="stat-inner">
-          <div class="stat-number">
-           95%
-          </div>
-         </div>
-        </div>
-        <div class="stat-label">
-         Hiệu Quả Diệt Sâu
-        </div>
-       </div>
-       <div class="stat-card">
-        <div class="stat-circle" style="background: conic-gradient(#66BB6A 0% 19%, #E0E0E0 19% 100%);">
-         <div class="stat-inner">
-          <div class="stat-number">
-           7
-          </div>
-         </div>
-        </div>
-        <div class="stat-label">
-         Ngày Phân Hủy
-        </div>
-       </div>
-      </div>
-     </div>
-    </div><!-- INGREDIENTS -->
-    <div class="section-title">
-     1. Thành Phần Chính
-    </div>
-    <div class="ingredients-grid">
-     <div class="ingredient-card">
-      <svg class="ing-icon" viewbox="0 0 50 50"><path d="M25 45 Q25 25 10 15 Q25 5 40 15 Q25 25 25 45 Z" fill="#4CAF50" /> <path d="M25 45 L25 10 M25 30 L15 20 M25 30 L35 20" stroke="#1B5E20" stroke-width="2" fill="none" />
-      </svg>
-      <div class="ing-name">
-       500g Lá Đu Đủ
-      </div>
-      <div style="font-size: 0.8rem; color: #666;">
-       (Lá già)
-      </div>
-     </div>
-     <div class="ingredient-card">
-      <svg class="ing-icon" viewbox="0 0 50 50"><rect x="15" y="20" width="20" height="20" fill="#FFB74D" rx="3"></rect> <path d="M15 20 L25 10 L45 10 L35 20 Z" fill="#FFE0B2" /> <path d="M35 20 L35 40 L45 30 L45 10 Z" fill="#FF9800" />
-      </svg>
-      <div class="ing-name">
-       100g Đường Nâu
-      </div>
-      <div style="font-size: 0.8rem; color: #666;">
-       (Hoặc mật rỉ)
-      </div>
-     </div>
-     <div class="ingredient-card">
-      <svg class="ing-icon" viewbox="0 0 50 50"><path d="M25 5 Q10 25 10 35 A15 15 0 0 0 40 35 Q40 25 25 5 Z" fill="#29B6F6" />
-      </svg>
-      <div class="ing-name">
-       1 Lít Nước
-      </div>
-      <div style="font-size: 0.8rem; color: #666;">
-       (Nước sạch)
-      </div>
-     </div>
-    </div><!-- PROCESS -->
-    <div class="section-title">
-     2. Quy Trình Thực Hiện
-    </div>
-    <div class="process-steps">
-     <div class="step">
-      <div class="step-number">
-       1
-      </div>
-      <div class="step-content">
-       <h4>Sơ chế</h4>
-       <p>Rửa sạch lá đu đủ, để ráo nước. Cắt nhỏ hoặc xay nhuyễn lá để dễ chiết xuất tinh chất.</p>
-      </div>
-     </div>
-     <div class="step">
-      <div class="step-number">
-       2
-      </div>
-      <div class="step-content">
-       <h4>Phối trộn</h4>
-       <p>Trộn đều lá đu đủ với đường và nước (có thể thêm chút rượu để tăng tính chiết xuất) theo tỷ lệ chuẩn.</p>
-      </div>
-     </div>
-     <div class="step">
-      <div class="step-number">
-       3
-      </div>
-      <div class="step-content">
-       <h4>Ủ lên men</h4>
-       <p>Cho hỗn hợp vào bình kín, ủ nơi có nhiệt độ ấm (25–30°C) từ 7-10 ngày để hoạt chất Papain được giải phóng.</p>
-      </div>
-     </div>
-     <div class="step">
-      <div class="step-number">
-       4
-      </div>
-      <div class="step-content">
-       <h4>Lọc &amp; Sử dụng</h4>
-       <p>Lọc bỏ bã, lấy phần nước cốt. Pha loãng với nước theo tỷ lệ 1:10 trước khi phun.</p>
-      </div>
-     </div>
-    </div><!-- BENEFITS -->
-    <div class="section-title">
-     3. Lợi Ích Vượt Trội
-    </div>
-    <div class="benefits-container">
-     <div class="benefit-item">
-      <svg class="benefit-icon" viewbox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><!-- Shield with heart --> <path d="M30 5 L30 5 Q45 5 50 15 L50 30 Q50 45 30 55 Q10 45 10 30 L10 15 Q15 5 30 5 Z" fill="#4CAF50" opacity="0.2" stroke="#2E7D32" stroke-width="2" /> <path d="M30 20 Q25 17 20 20 Q18 22 18 25 Q18 30 30 38 Q42 30 42 25 Q42 22 40 20 Q35 17 30 20 Z" fill="#E74C3C" />
-      </svg>
-      <div><strong>An toàn tuyệt đối:</strong> Không gây độc hại cho người sử dụng và động vật máu nóng.
-      </div>
-     </div>
-     <div class="benefit-item">
-      <svg class="benefit-icon" viewbox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><!-- Earth/Globe with leaf --> <circle cx="30" cy="30" r="20" fill="#2196F3" opacity="0.3" stroke="#1976D2" stroke-width="2" /> <path d="M20 25 Q25 20 30 25 Q35 30 30 35 Q25 30 20 35" fill="#4CAF50" opacity="0.5" /> <path d="M30 15 L30 35 M30 15 Q25 20 30 25 Q35 20 30 15" fill="#2E7D32" stroke="#1B5E20" stroke-width="2" />
-      </svg>
-      <div><strong>Bảo vệ môi trường:</strong> Phân hủy sinh học nhanh, không tồn dư hóa chất trong đất và nước.
-      </div>
-     </div>
-     <div class="benefit-item">
-      <svg class="benefit-icon" viewbox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><!-- Money/Coin with arrow down --> <circle cx="30" cy="30" r="18" fill="#FFC107" opacity="0.3" stroke="#FF9800" stroke-width="2" /> <circle cx="30" cy="30" r="12" fill="#FFD54F" opacity="0.5" /> <path d="M30 22 L30 38 M26 26 L34 26 M26 34 L34 34" stroke="#F57C00" stroke-width="2.5" stroke-linecap="round" /> <path d="M45 15 L45 25 L50 20 L45 15 M45 20 L40 20" stroke="#4CAF50" stroke-width="2.5" fill="none" stroke-linecap="round" />
-      </svg>
-      <div><strong>Chi phí thấp:</strong> Tận dụng nguyên liệu rẻ tiền, dễ kiếm tại địa phương.
-      </div>
-     </div>
-     <div class="benefit-item">
-      <svg class="benefit-icon" viewbox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><!-- Target with check --> <circle cx="30" cy="30" r="20" fill="none" stroke="#E91E63" stroke-width="2" /> <circle cx="30" cy="30" r="12" fill="none" stroke="#E91E63" stroke-width="2" /> <circle cx="30" cy="30" r="5" fill="#E91E63" /> <path d="M20 30 L27 37 L45 19" stroke="#4CAF50" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-      <div><strong>Hiệu quả cao:</strong> Diệt trừ tốt các loại sâu ăn lá, rệp sáp nhờ enzyme Papain.
-      </div>
-     </div>
-    </div><!-- SCIENCE CORNER -->
-    <div class="science-corner">
-     <h3>🔬 Góc Kiến Thức: Cơ Chế Diệt Sâu</h3>
-     <h4 style="color: #FF6F00; margin-bottom: 20px; font-size: 1.1rem;">Enzyme Papain Hoạt Động Như Thế Nào?</h4><!-- Process Flow -->
-     <div class="science-flow">
-      <div class="flow-step">
-       <div class="flow-icon">
-        🐛
-       </div>
-       <div class="flow-title">
-        Sâu Hại
-       </div>
-       <div class="flow-desc">
-        Côn trùng gây hại với lớp vỏ protein bảo vệ
-       </div>
-      </div>
-      <div class="flow-arrow">
-       →
-      </div>
-      <div class="flow-step">
-       <div class="flow-icon">
-        💧
-       </div>
-       <div class="flow-title">
-        Phun Thuốc
-       </div>
-       <div class="flow-desc">
-        Enzyme papain tiếp xúc với sâu bệnh
-       </div>
-      </div>
-      <div class="flow-arrow">
-       →
-      </div>
-      <div class="flow-step">
-       <div class="flow-icon">
-        ⚡
-       </div>
-       <div class="flow-title">
-        Phân Hủy
-       </div>
-       <div class="flow-desc">
-        Papain phá vỡ cấu trúc protein vỏ sâu
-       </div>
-      </div>
-      <div class="flow-arrow">
-       →
-      </div>
-      <div class="flow-step">
-       <div class="flow-icon">
-        ✅
-       </div>
-       <div class="flow-title">
-        Diệt Sâu
-       </div>
-       <div class="flow-desc">
-        Sâu chết do mất lớp bảo vệ protein
-       </div>
-      </div>
-     </div>
-     <div class="science-details">
-      <h4 style="color: #2E7D32; margin-bottom: 15px;">🔍 Giải Thích Chi Tiết:</h4>
-      <p style="margin-bottom: 10px;">Enzyme <strong>Papain</strong> là một loại protease (enzyme phân hủy protein) có trong lá đu đủ. Khi tiếp xúc với côn trùng, papain sẽ:</p>
-      <div class="detail-list">
-       <div class="detail-item"><span class="detail-number">1️⃣</span> <span class="detail-text">Gắn kết với các phân tử protein trên vỏ ngoài của sâu bệnh</span>
-       </div>
-       <div class="detail-item"><span class="detail-number">2️⃣</span> <span class="detail-text">Phá vỡ liên kết peptide giữa các amino acid, làm tan rã cấu trúc protein</span>
-       </div>
-       <div class="detail-item"><span class="detail-number">3️⃣</span> <span class="detail-text">Tiêu diệt sâu do mất lớp vỏ bảo vệ, dẫn đến mất nước và chết</span>
-       </div>
-       <div class="detail-item"><span class="detail-number">4️⃣</span> <span class="detail-text">Phân hủy tự nhiên trong môi trường sau 7-10 ngày, không gây ô nhiễm</span>
-       </div>
-      </div>
-     </div>
-    </div><!-- VIDEO TUTORIAL SECTION -->
-    <div class="section-title" style="margin-top: 40px;">
-     🎥 Video Hướng Dẫn Chi Tiết
-    </div>
-    <div class="video-section">
-     <div class="video-container">
-      <div class="video-placeholder">
-       <p class="video-example">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/PIR4n7whWVM?si=30Vhk_l13M6shbhV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-       </p>
-      </div>
-     </div>
-     <div class="video-topics">
-      <h4 style="color: #2E7D32; margin-bottom: 20px; text-align: center; font-size: 1.1rem;">📋 Nội Dung Video Bao Gồm:</h4>
-      <div class="topics-grid">
-       <div class="topic-card" data-timestamp="30">
-        <div class="topic-icon">
-         🧪
-        </div>
-        <div class="topic-title">
-         Cách Pha Chế
-        </div>
-        <div class="topic-desc">
-         Hướng dẫn chi tiết từng bước pha chế thuốc từ lá đu đủ
-        </div>
-        <div class="timestamp-hint">
-         Nhấn để xem
-        </div>
-       </div>
-       <div class="topic-card" data-timestamp="90">
-        <div class="topic-icon">
-         📦
-        </div>
-        <div class="topic-title">
-         Bảo Quản
-        </div>
-        <div class="topic-desc">
-         Cách bảo quản đúng cách để giữ hiệu quả lâu dài
-        </div>
-        <div class="timestamp-hint">
-         Nhấn để xem
-        </div>
-       </div>
-       <div class="topic-card" data-timestamp="150">
-        <div class="topic-icon">
-         💉
-        </div>
-        <div class="topic-title">
-         Cách Sử Dụng
-        </div>
-        <div class="topic-desc">
-         Hướng dẫn phun thuốc đúng liều lượng và thời điểm
-        </div>
-        <div class="timestamp-hint">
-         Nhấn để xem
-        </div>
-       </div>
-       <div class="topic-card" data-timestamp="210">
-        <div class="topic-icon">
-         ⚠️
-        </div>
-        <div class="topic-title">
-         Lưu Ý
-        </div>
-        <div class="topic-desc">
-         Những điều quan trọng cần biết khi sử dụng
-        </div>
-        <div class="timestamp-hint">
-         Nhấn để xem
-        </div>
-       </div>
-      </div>
-     </div>
-    </div>
-   </div>
-   <footer>
-    <p>SẢN PHẨM STEM - TRƯỜNG THPT HÙNG VƯƠNG ĐẮK LẮK</p>
-    <p style="margin-top: 5px; font-weight: bold; color: #FFB74D;">"Chung tay vì một nền nông nghiệp xanh - sạch - bền vững"</p>
-   </footer>
-  </div>
-  <script>
-        // Smooth animation for elements appearing
-        document.addEventListener('DOMContentLoaded', () => {
-            const cards = document.querySelectorAll('.ingredient-card, .step, .benefit-item');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry, index) => {
-                    if (entry.isIntersecting) {
-                        setTimeout(() => {
-                            entry.target.style.opacity = '1';
-                            entry.target.style.transform = 'translateY(0)';
-                        }, index * 100);
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            cards.forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                observer.observe(card);
-            });
-            
-            // ===== TÍNH NĂNG NHẢY VIDEO =====
-            // Hướng dẫn sử dụng:
-            // 1. Thay thế video placeholder bằng thẻ iframe YouTube của bạn
-            // 2. Đảm bảo iframe có id="youtubeVideo"
-            // 3. Cập nhật data-timestamp ở mỗi topic-card (đơn vị: giây)
-            //    VD: data-timestamp="30" = nhảy tới giây thứ 30
-            //        data-timestamp="90" = nhảy tới 1 phút 30 giây
-            
-            const topicCards = document.querySelectorAll('.topic-card[data-timestamp]');
-            
-            topicCards.forEach(card => {
-                card.addEventListener('click', () => {
-                    const timestamp = card.getAttribute('data-timestamp');
-                    const videoIframe = document.getElementById('youtubeVideo');
+     <div class="infographic-container">
+         <!-- Decorative Background Leaves -->
+         <svg class="bg-leaf" style="top: 100px; left: -50px; width: 300px;" viewBox="0 0 100 100">
+             <path d="M50 100 Q30 80 10 50 Q30 20 50 0 Q70 20 90 50 Q70 80 50 100 Z" fill="#2E7D32" />
+         </svg>
+         <svg class="bg-leaf" style="bottom: 200px; right: -50px; width: 400px; transform: rotate(180deg);" viewBox="0 0 100 100">
+             <path d="M50 100 Q30 80 10 50 Q30 20 50 0 Q70 20 90 50 Q70 80 50 100 Z" fill="#2E7D32" />
+         </svg>
+ 
+         <header>
+             <div class="school-badge">THPT Hùng Vương - Đắk Lắk</div>
+             <h1>Thuốc Trừ Sâu Sinh Học</h1>
+             <h2>Chế phẩm từ lá đu đủ - Giải pháp xanh cho nông nghiệp</h2>
+         </header>
+ 
+         <div class="content">
+             <!-- Hero Section with Background -->
+             <div class="hero-section">
+                 <!-- Background Illustration -->
+                 <div class="hero-background">
+                     <!-- Papaya Leaves Background -->
+                     <svg class="papaya-leaf-bg papaya-leaf-1" viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M50 10 L50 140 M50 10 L20 40 M50 10 L80 40 M50 40 L25 70 M50 40 L75 70 M50 80 L20 110 M50 80 L80 110" stroke="#2E7D32" stroke-width="3" fill="none" />
+                         <ellipse cx="50" cy="70" rx="35" ry="60" fill="#4CAF50" opacity="0.6" />
+                     </svg>
+                     <svg class="papaya-leaf-bg papaya-leaf-2" viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M50 10 L50 140 M50 10 L20 40 M50 10 L80 40 M50 40 L25 70 M50 40 L75 70 M50 80 L20 110 M50 80 L80 110" stroke="#2E7D32" stroke-width="3" fill="none" />
+                         <ellipse cx="50" cy="70" rx="35" ry="60" fill="#66BB6A" opacity="0.5" />
+                     </svg>
+                     <svg class="papaya-leaf-bg papaya-leaf-3" viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M50 10 L50 140 M50 10 L20 40 M50 10 L80 40 M50 40 L25 70 M50 40 L75 70 M50 80 L20 110 M50 80 L80 110" stroke="#2E7D32" stroke-width="3" fill="none" />
+                         <ellipse cx="50" cy="70" rx="35" ry="60" fill="#81C784" opacity="0.6" />
+                     </svg>
+                     <!-- Rice Field Background -->
+                     <svg class="rice-field" viewBox="0 0 600 150" xmlns="http://www.w3.org/2000/svg">
+                         <!-- Rice plants -->
+                         <g class="rice-plant" style="animation-delay: 0s;">
+                             <path d="M50 150 L50 80 M50 80 L45 90 M50 80 L55 90 M50 80 L48 100 M50 80 L52 100" stroke="#558B2F" stroke-width="2" fill="none" />
+                             <circle cx="45" cy="85" r="3" fill="#FDD835" />
+                             <circle cx="55" cy="85" r="3" fill="#FDD835" />
+                         </g>
+                         <g class="rice-plant" style="animation-delay: 0.5s;">
+                             <path d="M120 150 L120 90 M120 90 L115 100 M120 90 L125 100 M120 90 L118 110 M120 90 L122 110" stroke="#558B2F" stroke-width="2" fill="none" />
+                             <circle cx="115" cy="95" r="3" fill="#FDD835" />
+                             <circle cx="125" cy="95" r="3" fill="#FDD835" />
+                         </g>
+                         <g class="rice-plant" style="animation-delay: 1s;">
+                             <path d="M200 150 L200 70 M200 70 L195 80 M200 70 L205 80 M200 70 L198 90 M200 70 L202 90" stroke="#558B2F" stroke-width="2" fill="none" />
+                             <circle cx="195" cy="75" r="3" fill="#FDD835" />
+                             <circle cx="205" cy="75" r="3" fill="#FDD835" />
+                         </g>
+                         <g class="rice-plant" style="animation-delay: 1.5s;">
+                             <path d="M280 150 L280 85 M280 85 L275 95 M280 85 L285 95 M280 85 L278 105 M280 85 L282 105" stroke="#558B2F" stroke-width="2" fill="none" />
+                             <circle cx="275" cy="90" r="3" fill="#FDD835" />
+                             <circle cx="285" cy="90" r="3" fill="#FDD835" />
+                         </g>
+                         <g class="rice-plant" style="animation-delay: 2s;">
+                             <path d="M360 150 L360 75 M360 75 L355 85 M360 75 L365 85 M360 75 L358 95 M360 75 L362 95" stroke="#558B2F" stroke-width="2" fill="none" />
+                             <circle cx="355" cy="80" r="3" fill="#FDD835" />
+                             <circle cx="365" cy="80" r="3" fill="#FDD835" />
+                         </g>
+                         <g class="rice-plant" style="animation-delay: 0.3s;">
+                             <path d="M440 150 L440 80 M440 80 L435 90 M440 80 L445 90 M440 80 L438 100 M440 80 L442 100" stroke="#558B2F" stroke-width="2" fill="none" />
+                             <circle cx="435" cy="85" r="3" fill="#FDD835" />
+                             <circle cx="445" cy="85" r="3" fill="#FDD835" />
+                         </g>
+                         <g class="rice-plant" style="animation-delay: 1.2s;">
+                             <path d="M520 150 L520 90 M520 90 L515 100 M520 90 L525 100 M520 90 L518 110 M520 90 L522 110" stroke="#558B2F" stroke-width="2" fill="none" />
+                             <circle cx="515" cy="95" r="3" fill="#FDD835" />
+                             <circle cx="525" cy="95" r="3" fill="#FDD835" />
+                         </g>
+                     </svg>
+                 </div>
+ 
+                 <!-- Product Bottle -->
+                 <div class="product-display">
+                     <svg class="svg-bottle" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+                         <!-- Cap -->
+                         <rect x="75" y="10" width="50" height="20" rx="5" fill="#37474F"></rect>
+                         <!-- Neck -->
+                         <rect x="85" y="30" width="30" height="20" fill="#90A4AE"></rect>
+                         <!-- Bottle Shape with animated liquid -->
+                         <defs>
+                             <linearGradient id="liquidGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                 <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1"></stop>
+                                 <stop offset="50%" style="stop-color:#66BB6A;stop-opacity:1"></stop>
+                                 <stop offset="100%" style="stop-color:#81C784;stop-opacity:1"></stop>
+                             </linearGradient>
+                             <clipPath id="bottleClip">
+                                 <path d="M60 50 L140 50 Q160 50 160 80 L160 280 Q160 300 140 300 L60 300 Q40 300 40 280 L40 80 Q40 50 60 50 Z" />
+                             </clipPath>
+                         </defs>
+                         <!-- Liquid with wave animation -->
+                         <g clip-path="url(#bottleClip)">
+                             <rect id="liquidFill" x="40" y="80" width="120" height="220" fill="url(#liquidGrad)"></rect>
+                             <!-- Wave effect on top of liquid -->
+                             <path d="M40 80 Q60 75 80 80 T120 80 T160 80" fill="none" stroke="#81C784" stroke-width="2" opacity="0.5">
+                                 <animate attributeName="d" values="M40 80 Q60 75 80 80 T120 80 T160 80;
+                                                  M40 80 Q60 85 80 80 T120 80 T160 80;
+                                                  M40 80 Q60 75 80 80 T120 80 T160 80" dur="2s" repeatCount="indefinite" />
+                             </path>
+                         </g>
+                         <!-- Bottle outline -->
+                         <path d="M60 50 L140 50 Q160 50 160 80 L160 280 Q160 300 140 300 L60 300 Q40 300 40 280 L40 80 Q40 50 60 50 Z" fill="none" stroke="#2E7D32" stroke-width="2" />
+                         <!-- Label -->
+                         <rect x="45" y="100" width="110" height="120" rx="5" fill="#FFF"></rect>
+                         <rect x="45" y="100" width="110" height="25" rx="5" fill="#2E7D32"></rect>
+                         <text x="100" y="117" font-family="Inter" font-size="10" fill="white" text-anchor="middle" font-weight="bold">BIO PESTICIDE</text>
+                         <!-- Animated Papaya Leaf on Label -->
+                         <g>
+                             <path d="M100 160 L100 130 M100 160 L80 140 M100 160 L120 140 M100 160 L70 155 M100 160 L130 155" stroke="#2E7D32" stroke-width="2">
+                                 <animateTransform attributeName="transform" type="rotate" values="0 100 160; 3 100 160; 0 100 160; -3 100 160; 0 100 160" dur="4s" repeatCount="indefinite" />
+                             </path>
+                             <circle cx="100" cy="160" r="25" fill="#C8E6C9" opacity="0.5">
+                                 <animate attributeName="opacity" values="0.5;0.7;0.5" dur="2s" repeatCount="indefinite" />
+                             </circle>
+                         </g>
+                         <text x="100" y="190" font-family="Inter" font-size="12" fill="#2E7D32" text-anchor="middle" font-weight="bold">LÁ ĐU ĐỦ</text>
+                         <text x="100" y="205" font-family="Inter" font-size="8" fill="#555" text-anchor="middle">Sản phẩm STEM</text>
+                         <!-- Sparkle effects -->
+                         <circle class="sparkle" cx="55" cy="70" r="2" fill="white" opacity="0.8" style="animation-delay: 0s;" />
+                         <circle class="sparkle" cx="145" cy="100" r="2" fill="white" opacity="0.8" style="animation-delay: 0.5s;" />
+                         <circle class="sparkle" cx="50" cy="150" r="2" fill="white" opacity="0.8" style="animation-delay: 1s;" />
+                         <circle class="sparkle" cx="150" cy="200" r="2" fill="white" opacity="0.8" style="animation-delay: 1.5s;" />
+                         <!-- Highlights/Reflections -->
+                         <path d="M50 60 Q50 55 60 55 L65 55" stroke="white" stroke-width="3" opacity="0.5" fill="none" />
+                         <rect x="145" y="70" width="5" height="200" rx="2" fill="white" opacity="0.3"></rect>
+                     </svg>
+                 </div>
+ 
+                 <div class="story-section">
+                     <div class="story-header">
+                         <h3>💡 Giới Thiệu Dự Án</h3>
+                     </div>
+                     <div class="project-intro">
+                         <div class="intro-item">
+                             <h4>📌 Thực trạng:</h4>
+                             <p>Việc lạm dụng thuốc trừ sâu hóa học trong nông nghiệp đang gây ra những hậu quả nghiêm trọng đến sức khỏe con người và môi trường. Dư lượng hóa chất trong nông sản, ô nhiễm nguồn nước, và sự kháng thuốc của sâu bệnh đang trở thành vấn đề cấp bách.</p>
+                         </div>
+                         <div class="intro-item">
+                             <h4>🎯 Lý do chọn đề tài:</h4>
+                             <p>Nhận thấy tầm quan trọng của nông nghiệp bền vững và an toàn thực phẩm, nhóm nghiên cứu STEM Sinh Học của chúng em đã quyết định phát triển thuốc trừ sâu sinh học từ lá đu đủ - một nguồn nguyên liệu tự nhiên, dễ tìm, và có hiệu quả cao trong việc kiểm soát sâu hại.</p>
+                         </div>
+                         <div class="intro-item">
+                             <h4>🚀 Mục tiêu:</h4>
+                             <p>Chúng em không chỉ nghiên cứu và công bố kết quả khoa học, mà còn mong muốn thương mại hóa sản phẩm để đưa giải pháp này đến tay nông dân Việt Nam, góp phần xây dựng nền nông nghiệp xanh, sạch, và bền vững.</p>
+                         </div>
+                     </div>
+ 
+                     <div class="stats-grid">
+                         <div class="stat-card">
+                             <div class="stat-circle" style="background: conic-gradient(#4CAF50 0% 100%, #E0E0E0 100% 100%);">
+                                 <div class="stat-inner">
+                                     <div class="stat-number">100%</div>
+                                 </div>
+                             </div>
+                             <div class="stat-label">Tự Nhiên</div>
+                         </div>
+                         <div class="stat-card">
+                             <div class="stat-circle" style="background: conic-gradient(#2E7D32 0% 0%, #E0E0E0 0% 100%);">
+                                 <div class="stat-inner">
+                                     <div class="stat-number">0</div>
+                                 </div>
+                             </div>
+                             <div class="stat-label">Hóa Chất Độc Hại</div>
+                         </div>
+                         <div class="stat-card">
+                             <div class="stat-circle" style="background: conic-gradient(#FF6F00 0% 95%, #E0E0E0 95% 100%);">
+                                 <div class="stat-inner">
+                                     <div class="stat-number">95%</div>
+                                 </div>
+                             </div>
+                             <div class="stat-label">Hiệu Quả Diệt Sâu</div>
+                         </div>
+                         <div class="stat-card">
+                             <div class="stat-circle" style="background: conic-gradient(#66BB6A 0% 19%, #E0E0E0 19% 100%);">
+                                 <div class="stat-inner">
+                                     <div class="stat-number">7</div>
+                                 </div>
+                             </div>
+                             <div class="stat-label">Ngày Phân Hủy</div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+ 
+             <!-- INGREDIENTS -->
+             <div class="section-title">1. Thành Phần Chính</div>
+             <div class="ingredients-grid">
+                 <div class="ingredient-card">
+                     <svg class="ing-icon" viewBox="0 0 50 50">
+                         <path d="M25 45 Q25 25 10 15 Q25 5 40 15 Q25 25 25 45 Z" fill="#4CAF50" />
+                         <path d="M25 45 L25 10 M25 30 L15 20 M25 30 L35 20" stroke="#1B5E20" stroke-width="2" fill="none" />
+                     </svg>
+                     <div class="ing-name">500g Lá Đu Đủ</div>
+                     <div style="font-size: 0.8rem; color: #666;">(Lá già)</div>
+                 </div>
+                 <div class="ingredient-card">
+                     <svg class="ing-icon" viewBox="0 0 50 50">
+                         <rect x="15" y="20" width="20" height="20" fill="#FFB74D" rx="3"></rect>
+                         <path d="M15 20 L25 10 L45 10 L35 20 Z" fill="#FFE0B2" />
+                         <path d="M35 20 L35 40 L45 30 L45 10 Z" fill="#FF9800" />
+                     </svg>
+                     <div class="ing-name">100g Đường Nâu</div>
+                     <div style="font-size: 0.8rem; color: #666;">(Hoặc mật rỉ)</div>
+                 </div>
+                 <div class="ingredient-card">
+                     <svg class="ing-icon" viewBox="0 0 50 50">
+                         <path d="M25 5 Q10 25 10 35 A15 15 0 0 0 40 35 Q40 25 25 5 Z" fill="#29B6F6" />
+                     </svg>
+                     <div class="ing-name">1 Lít Nước</div>
+                     <div style="font-size: 0.8rem; color: #666;">(Nước sạch)</div>
+                 </div>
+             </div>
+ 
+             <!-- PROCESS -->
+             <div class="section-title">2. Quy Trình Thực Hiện</div>
+             <div class="process-steps">
+                 <div class="step">
+                     <div class="step-number">1</div>
+                     <div class="step-content">
+                         <h4>Sơ chế</h4>
+                         <p>Rửa sạch lá đu đủ, để ráo nước. Cắt nhỏ hoặc xay nhuyễn lá để dễ chiết xuất tinh chất.</p>
+                     </div>
+                 </div>
+                 <div class="step">
+                     <div class="step-number">2</div>
+                     <div class="step-content">
+                         <h4>Phối trộn</h4>
+                         <p>Trộn đều lá đu đủ với đường và nước (có thể thêm chút rượu để tăng tính chiết xuất) theo tỷ lệ chuẩn.</p>
+                     </div>
+                 </div>
+                 <div class="step">
+                     <div class="step-number">3</div>
+                     <div class="step-content">
+                         <h4>Ủ lên men</h4>
+                         <p>Cho hỗn hợp vào bình kín, ủ nơi có nhiệt độ ấm (25–30°C) từ 7-10 ngày để hoạt chất Papain được giải phóng.</p>
+                     </div>
+                 </div>
+                 <div class="step">
+                     <div class="step-number">4</div>
+                     <div class="step-content">
+                         <h4>Lọc & Sử dụng</h4>
+                         <p>Lọc bỏ bã, lấy phần nước cốt. Pha loãng với nước theo tỷ lệ 1:10 trước khi phun.</p>
+                     </div>
+                 </div>
+             </div>
+ 
+             <!-- BENEFITS -->
+             <div class="section-title">3. Lợi Ích Vượt Trội</div>
+             <div class="benefits-container">
+                 <div class="benefit-item">
+                     <svg class="benefit-icon" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M30 5 L30 5 Q45 5 50 15 L50 30 Q50 45 30 55 Q10 45 10 30 L10 15 Q15 5 30 5 Z" fill="#4CAF50" opacity="0.2" stroke="#2E7D32" stroke-width="2" />
+                         <path d="M30 20 Q25 17 20 20 Q18 22 18 25 Q18 30 30 38 Q42 30 42 25 Q42 22 40 20 Q35 17 30 20 Z" fill="#E74C3C" />
+                     </svg>
+                     <div><strong>An toàn tuyệt đối:</strong> Không gây độc hại cho người sử dụng và động vật máu nóng.</div>
+                 </div>
+                 <div class="benefit-item">
+                     <svg class="benefit-icon" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                         <circle cx="30" cy="30" r="20" fill="#2196F3" opacity="0.3" stroke="#1976D2" stroke-width="2" />
+                         <path d="M20 25 Q25 20 30 25 Q35 30 30 35 Q25 30 20 35" fill="#4CAF50" opacity="0.5" />
+                         <path d="M30 15 L30 35 M30 15 Q25 20 30 25 Q35 20 30 15" fill="#2E7D32" stroke="#1B5E20" stroke-width="2" />
+                     </svg>
+                     <div><strong>Bảo vệ môi trường:</strong> Phân hủy sinh học nhanh, không tồn dư hóa chất trong đất và nước.</div>
+                 </div>
+                 <div class="benefit-item">
+                     <svg class="benefit-icon" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                         <circle cx="30" cy="30" r="18" fill="#FFC107" opacity="0.3" stroke="#FF9800" stroke-width="2" />
+                         <text x="30" y="38" font-family="Inter" font-size="20" fill="#F57C00" text-anchor="middle" font-weight="bold">₫</text>
+                         <path d="M45 20 L45 10 L50 15 L45 20 M45 15 L40 15" stroke="#4CAF50" stroke-width="2" fill="none" />
+                     </svg>
+                     <div><strong>Chi phí thấp:</strong> Tận dụng nguyên liệu rẻ tiền, dễ kiếm tại địa phương.</div>
+                 </div>
+                 <div class="benefit-item">
+                     <svg class="benefit-icon" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                         <circle cx="30" cy="30" r="20" fill="none" stroke="#E91E63" stroke-width="2" />
+                         <circle cx="30" cy="30" r="12" fill="none" stroke="#E91E63" stroke-width="2" />
+                         <circle cx="30" cy="30" r="5" fill="#E91E63" />
+                         <path d="M20 30 L27 37 L45 19" stroke="#4CAF50" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                     </svg>
+                     <div><strong>Hiệu quả cao:</strong> Diệt trừ tốt các loại sâu ăn lá, rệp sáp nhờ enzyme Papain.</div>
+                 </div>
+             </div>
+ 
+             <!-- SCIENCE CORNER -->
+             <div class="science-corner">
+                 <h3>🔬 Góc Kiến Thức: Cơ Chế Diệt Sâu</h3>
+                 <h4 style="color: #FF6F00; margin-bottom: 20px; font-size: 1.1rem; font-weight: 600;">Enzyme Papain Hoạt Động Như Thế Nào?</h4>
+                 <!-- Process Flow -->
+                 <div class="science-flow">
+                     <div class="flow-step">
+                         <div class="flow-icon">🐛</div>
+                         <div class="flow-title">Sâu Hại</div>
+                         <div class="flow-desc">Côn trùng gây hại với lớp vỏ protein bảo vệ</div>
+                     </div>
+                     <div class="flow-arrow">→</div>
+                     <div class="flow-step">
+                         <div class="flow-icon">💧</div>
+                         <div class="flow-title">Phun Thuốc</div>
+                         <div class="flow-desc">Enzyme papain tiếp xúc với sâu bệnh</div>
+                     </div>
+                     <div class="flow-arrow">→</div>
+                     <div class="flow-step">
+                         <div class="flow-icon">⚡</div>
+                         <div class="flow-title">Phân Hủy</div>
+                         <div class="flow-desc">Papain phá vỡ cấu trúc protein vỏ sâu</div>
+                     </div>
+                     <div class="flow-arrow">→</div>
+                     <div class="flow-step">
+                         <div class="flow-icon">✅</div>
+                         <div class="flow-title">Diệt Sâu</div>
+                         <div class="flow-desc">Sâu chết do mất lớp bảo vệ protein</div>
+                     </div>
+                 </div>
+ 
+                 <div class="science-details">
+                     <h4 style="color: #2E7D32; margin-bottom: 15px; font-weight: 700;">🔍 Giải Thích Chi Tiết:</h4>
+                     <p style="margin-bottom: 10px;">Enzyme <strong>Papain</strong> là một loại protease (enzyme phân hủy protein) có trong lá đu đủ. Khi tiếp xúc với côn trùng, papain sẽ:</p>
+                     <div class="detail-list">
+                         <div class="detail-item">
+                             <span class="detail-number">1️⃣</span>
+                             <span class="detail-text">Gắn kết với các phân tử protein trên vỏ ngoài của sâu bệnh</span>
+                         </div>
+                         <div class="detail-item">
+                             <span class="detail-number">2️⃣</span>
+                             <span class="detail-text">Phá vỡ liên kết peptide giữa các amino acid, làm tan rã cấu trúc protein</span>
+                         </div>
+                         <div class="detail-item">
+                             <span class="detail-number">3️⃣</span>
+                             <span class="detail-text">Tiêu diệt sâu do mất lớp vỏ bảo vệ, dẫn đến mất nước và chết</span>
+                         </div>
+                         <div class="detail-item">
+                             <span class="detail-number">4️⃣</span>
+                             <span class="detail-text">Phân hủy tự nhiên trong môi trường sau 7-10 ngày, không gây ô nhiễm</span>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+ 
+             <!-- VIDEO TUTORIAL SECTION -->
+             <div class="section-title" style="margin-top: 40px;">🎥 Video Hướng Dẫn Chi Tiết</div>
+             <div class="video-section">
+                 <div class="video-container">
+                     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PIR4n7whWVM?si=UleeIhPzh-T6LVFq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                 </div>
+ 
+                 <div class="video-topics">
+                     <h4 style="color: #2E7D32; margin-bottom: 20px; text-align: center; font-size: 1.1rem; font-weight: 700;">📋Nội Dung Video Bao Gồm:</h4>
+                     <div class="topics-grid">
+                         <div class="topic-card">
+                             <div class="topic-icon">🧪</div>
+                             <div class="topic-title">Cách Pha Chế</div>
+                             <div class="topic-desc">Hướng dẫn chi tiết từng bước pha chế thuốc từ lá đu đủ</div>
+                         </div>
+                         <div class="topic-card">
+                             <div class="topic-icon">📦</div>
+                             <div class="topic-title">Bảo Quản</div>
+                             <div class="topic-desc">Cách bảo quản đúng cách để giữ hiệu quả lâu dài</div>
+                         </div>
+                         <div class="topic-card">
+                             <div class="topic-icon">💉</div>
+                             <div class="topic-title">Cách Sử Dụng</div>
+                             <div class="topic-desc">Hướng dẫn phun thuốc đúng liều lượng và thời điểm</div>
+                         </div>
+                         <div class="topic-card">
+                             <div class="topic-icon">⚠️</div>
+                             <div class="topic-title">Lưu Ý</div>
+                             <div class="topic-desc">Những điều quan trọng cần biết khi sử dụng</div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+ 
+             <!-- TEAM SECTION -->
+             <section class="team-section">
+                 <div class="section-header">
+                     <div class="section-badge">👥 Đội Ngũ Nghiên Cứu</div>
+                     <h2 class="section-title-main">Nhóm Học Sinh STEM Sinh Học</h2>
+                     <p class="section-description">Chúng tôi là nhóm học sinh đam mê khoa học và môi trường, luôn nỗ lực tìm kiếm những giải pháp sáng tạo cho nông nghiệp Việt Nam.</p>
+                 </div>
+                 <div class="team-grid">
+                     <div class="team-card">
+                         <div class="team-card-header">
+                             <div class="team-avatar">👨‍🎓</div>
+                             <h3 class="team-name">Trần Thị Mỹ</h3>
+                             <span class="team-role">Nhóm trưởng</span>
+                         </div>
+                         <div class="team-card-body">
+                             <p class="team-description">Chịu trách nhiệm chính trong nghiên cứu và thiết kế quy trình, điều phối toàn bộ hoạt động của nhóm.</p>
+                         </div>
+                     </div>
+                     <div class="team-card">
+                         <div class="team-card-header">
+                             <div class="team-avatar">👩‍🎓</div>
+                             <h3 class="team-name">Nguyễn Thanh Thảo</h3>
+                             <span class="team-role">Nhóm phó</span>
+                         </div>
+                         <div class="team-card-body">
+                             <p class="team-description">Phụ trách thu thập, phân tích dữ liệu thí nghiệm và đánh giá hiệu quả diệt sâu của sản phẩm trên các loại côn trùng gây hại.</p>
+                         </div>
+                     </div>
+                     <div class="team-card">
+                         <div class="team-card-header">
+                             <div class="team-avatar">👨‍🎓</div>
+                             <h3 class="team-name">Nguyễn Phương Uyên</h3>
+                             <span class="team-role">Thành Viên</span>
+                         </div>
+                         <div class="team-card-body">
+                             <p class="team-description">Tổng hợp dữ liệu đã thu thập, phân tích và viết báo cáo khoa học.</p>
+                         </div>
+                     </div>
                     
-                    if (videoIframe && timestamp) {
-                        // Lấy src hiện tại của iframe
-                        let currentSrc = videoIframe.src;
-                        
-                        // Xóa timestamp cũ nếu có
-                        currentSrc = currentSrc.split('?')[0].split('&')[0];
-                        
-                        // Thêm timestamp mới
-                        const newSrc = currentSrc + '?start=' + timestamp + '&autoplay=1';
-                        videoIframe.src = newSrc;
-                        
-                        // Scroll lên video
-                        videoIframe.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    }
-                });
-            });
-        });
-        
-        // ===== HƯỚNG DẪN THÊM VIDEO =====
-        // Thay thế phần video-placeholder bằng code này:
-        /*
-        <iframe 
-            id="youtubeVideo"
-            width="100%" 
-            height="100%" 
-            src="https://www.youtube.com/embed/VIDEO_ID_CUA_BAN" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-        </iframe>
-        */
-        
-        // Sau đó cập nhật timestamp cho từng topic-card:
-        // - "Cách Pha Chế": data-timestamp="30" (giây thứ 30)
-        // - "Bảo Quản": data-timestamp="90" (1 phút 30 giây)
-        // - "Cách Sử Dụng": data-timestamp="150" (2 phút 30 giây)
-        // - "Lưu Ý": data-timestamp="210" (3 phút 30 giây)
-    </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a40ccfd32f99b9f',t:'MTc2NDA3MDA4Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
-</html>
+                     <div class="team-card">
+                         <div class="team-card-header">
+                             <div class="team-avatar">👩‍🎓</div>
+                             <h3 class="team-name">Huỳnh Thị Hà Điệp</h3>
+                             <span class="team-role">Thành Viên</span>
+                         </div>
+                         <div class="team-card-body">
+                             <p class="team-description">Biên soạn tài liệu nghiên cứu và chuẩn bị các bài thuyết trình cho cuộc thi khoa học.</p>
+                         </div>
+                     </div>
+                     <div class="team-card">
+                         <div class="team-card-header">
+                             <div class="team-avatar">👩‍🎓</div>
+                             <h3 class="team-name">Nguyễn Văn Hiển</h3>
+                             <span class="team-role">Thành Viên</span>
+                         </div>
+                         <div class="team-card-body">
+                             <p class="team-description">Chịu trách nhiệm cho việc quảng bá sản phẩm, công bố dự án khoa học </p>
+                         </div>
+                     </div>
+                 </div>
+ 
+                 <!-- SUPERVISOR -->
+                 <div class="supervisor-wrapper">
+                     <div class="supervisor-badge">Giảng Viên Hướng Dẫn</div>
+                     <div class="supervisor-card">
+                         <div class="supervisor-avatar">
+                            <img src="1.jpg" alt="Giảng viên">
+                        </div>
+                         <div class="supervisor-info">
+                             <h3>Cô. Nguyễn Thị Hồng Gấm</h3>
+                             <div class="supervisor-title">🎓 Giáo Viên bọ môn Sinh Học</div>
+                             <p class="supervisor-description">Với hơn "10 ngàn năm" năm kinh nghiệm giảng dạy và nghiên cứu trong lĩnh vực sinh học ứng dụng, Cô đã đồng hành và định hướng cho nhóm trong suốt quá trình nghiên cứu, từ ý tưởng ban đầu đến sản phẩm hoàn thiện. Cô luôn khuyến khích tinh thần khoa học và sáng tạo của học sinh.</p>
+                             <div class="supervisor-credentials">
+                                 <span class="credential-badge">Trình độ chuyên môn.. thạc sĩ.. Sinh học</span>
+                                 <span class="credential-badge">...năm kinh nghiệm</span>
+                                 <span class="credential-badge">Giáo viên xuất sắc</span>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </section>
+ 
+             <!-- PRODUCTS SECTION -->
+             <section class="products-section">
+                 <div class="section-header">
+                     <div class="section-badge">🛒 Sản Phẩm</div>
+                     <h2 class="section-title-main">Gói Sản Phẩm & Bảng Giá</h2>
+                     <p class="section-description">Chọn gói sản phẩm phù hợp với nhu cầu của bạn. Tất cả sản phẩm đều được nghiên cứu kỹ lưỡng và kiểm nghiệm chất lượng.</p>
+                 </div>
+                 <div class="products-grid">
+                     <!-- Product 1 -->
+                     <div class="product-card">
+                         <span class="product-badge">Phổ Biến</span>
+                         <div class="product-header">
+                             <span class="product-icon">🍃</span>
+                             <h3 class="product-name">Gói Gia Đình</h3>
+                             <p class="product-subtitle">Lý tưởng cho vườn nhà, diện tích nhỏ</p>
+                         </div>
+                         <div class="product-body">
+                             <div class="product-price">
+                                 <div class="price-amount">150.000₫</div>
+                                 <div class="price-label">/ Chai 500ml</div>
+                             </div>
+                             <ul class="product-features">
+                                 <li>Dung tích 500ml tiện lợi</li>
+                                 <li>Sử dụng được 15-20 lần</li>
+                                 <li>Hạn sử dụng 6 tháng</li>
+                                 <li>Kèm hướng dẫn chi tiết</li>
+                                 <li>Phù hợp vườn rau gia đình</li>
+                             </ul>
+                             <button class="btn btn-primary btn-block" onclick="scrollToOrder('family')">Đặt Hàng Ngay</button>
+                         </div>
+                     </div>
+                     <!-- Product 2 -->
+                     <div class="product-card">
+                         <span class="product-badge">Bán Chạy</span>
+                         <div class="product-header">
+                             <span class="product-icon">🌾</span>
+                             <h3 class="product-name">Gói Nông Hộ</h3>
+                             <p class="product-subtitle">Dành cho ruộng rẫy, vườn cây ăn trái</p>
+                         </div>
+                         <div class="product-body">
+                             <div class="product-price">
+                                 <div class="price-amount">250.000₫</div>
+                                 <div class="price-label">/ Chai 1 Lít</div>
+                             </div>
+                             <ul class="product-features">
+                                 <li>Dung tích 1 lít kinh tế</li>
+                                 <li>Sử dụng được 30-40 lần</li>
+                                 <li>Hạn sử dụng 8 tháng</li>
+                                 <li>Tư vấn kỹ thuật miễn phí</li>
+                                 <li>Giá ưu đãi cho nông hộ</li>
+                             </ul>
+                             <button class="btn btn-primary btn-block" onclick="scrollToOrder('farmer')">Đặt Hàng Ngay</button>
+                         </div>
+                     </div>
+                     <!-- Product 3 -->
+                     <div class="product-card">
+                         <span class="product-badge">Thương Mại</span>
+                         <div class="product-header">
+                             <span class="product-icon">🏭</span>
+                             <h3 class="product-name">Gói Doanh Nghiệp</h3>
+                             <p class="product-subtitle">Cho trang trại, HTX nông nghiệp</p>
+                         </div>
+                         <div class="product-body">
+                             <div class="product-price">
+                                 <div class="price-amount">1.000.000₫</div>
+                                 <div class="price-label">/ Can 5 Lít</div>
+                             </div>
+                             <ul class="product-features">
+                                 <li>Dung tích 5 lít cho sản xuất</li>
+                                 <li>Sử dụng được 150-200 lần</li>
+                                 <li>Hạn sử dụng 12 tháng</li>
+                                 <li>Hỗ trợ kỹ thuật 24/7</li>
+                                 <li>Ưu đãi mua số lượng lớn</li>
+                             </ul>
+                             <button class="btn btn-primary btn-block" onclick="scrollToOrder('business')">Liên Hệ Ngay</button>
+                         </div>
+                     </div>
+                 </div>
+             </section>
+ 
+             <!-- ORDER FORM -->
+             <section class="order-section" id="orderForm">
+                 <div class="order-container">
+                     <div class="form-card">
+                         <div class="form-header">
+                             <h3>📝 Đơn Đặt Hàng</h3>
+                             <p>Vui lòng điền đầy đủ thông tin để đặt hàng. Chúng tôi sẽ liên hệ xác nhận trong 24h.</p>
+                         </div>
+                         <form id="orderFormElement" onsubmit="handleOrderSubmit(event)">
+                             <div class="form-row">
+                                 <div class="form-group">
+                                     <label class="form-label">Họ và Tên <span class="required">*</span></label>
+                                     <input type="text" class="form-input" id="customerName" placeholder="Nguyễn Văn A" required>
+                                 </div>
+                                 <div class="form-group">
+                                     <label class="form-label">Số Điện Thoại <span class="required">*</span></label>
+                                     <input type="tel" class="form-input" id="customerPhone" placeholder="0123456789" required>
+                                 </div>
+                             </div>
+                             <div class="form-group">
+                                 <label class="form-label">Email</label>
+                                 <input type="email" class="form-input" id="customerEmail" placeholder="email@example.com">
+                             </div>
+                             <div class="form-row">
+                                 <div class="form-group">
+                                     <label class="form-label">Chọn Sản Phẩm <span class="required">*</span></label>
+                                     <select class="form-select" id="productSelect" required>
+                                         <option value="">-- Chọn sản phẩm --</option>
+                                         <option value="family">Gói Gia Đình - 150.000₫</option>
+                                         <option value="farmer">Gói Nông Hộ - 250.000₫</option>
+                                         <option value="business">Gói Doanh Nghiệp - 1.000.000₫</option>
+                                     </select>
+                                 </div>
+                                 <div class="form-group">
+                                     <label class="form-label">Số Lượng <span class="required">*</span></label>
+                                     <input type="number" class="form-input" id="quantity" min="1" value="1" required>
+                                 </div>
+                             </div>
+                             <div class="form-group">
+                                 <label class="form-label">Địa Chỉ Giao Hàng <span class="required">*</span></label>
+                                 <textarea class="form-textarea" id="address" placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành phố" required></textarea>
+                             </div>
+                             <div class="form-group">
+                                 <label class="form-label">Ghi Chú</label>
+                                 <textarea class="form-textarea" id="notes" placeholder="Yêu cầu đặc biệt về đơn hàng (nếu có)..."></textarea>
+                             </div>
+                             <button type="submit" class="btn btn-primary btn-block" style="margin-top: 1rem;">Xác Nhận Đặt Hàng</button>
+                         </form>
+                         <div class="contact-cards">
+                             <div class="contact-card">
+                                 <span class="contact-icon">📞</span>
+                                 <div class="contact-label">Hotline</div>
+                                 <div class="contact-value">0123-456-789</div>
+                             </div>
+                             <div class="contact-card">
+                                 <span class="contact-icon">📧</span>
+                                 <div class="contact-label">Email</div>
+                                 <div class="contact-value">stem@hvdk.edu.vn</div>
+                             </div>
+                             <div class="contact-card">
+                                 <span class="contact-icon">📍</span>
+                                 <div class="contact-label">Địa Chỉ</div>
+                                 <div class="contact-value">THPT Hùng Vương, Đắk Lắk</div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </section>
+         </div>
+ 
+         <footer>
+             <p>SẢN PHẨM STEM - TRƯỜNG THPT HÙNG VƯƠNG ĐẮK LẮK</p>
+             <p style="margin-top: 5px; font-weight: bold; color: #FFB74D;">"Chung tay vì một nền nông nghiệp xanh - sạch - bền vững"</p>
+         </footer>
+     </div>
+ 
+     <script>
+         // Smooth animation for elements appearing
+         document.addEventListener('DOMContentLoaded', () => {
+             const cards = document.querySelectorAll('.ingredient-card, .step, .benefit-item, .team-card, .product-card, .supervisor-wrapper');
+             
+             const observer = new IntersectionObserver((entries) => {
+                 entries.forEach((entry, index) => {
+                     if (entry.isIntersecting) {
+                         setTimeout(() => {
+                             entry.target.style.opacity = '1';
+                             entry.target.style.transform = 'translateY(0)';
+                         }, index * 100);
+                     }
+                 });
+             }, { threshold: 0.1 });
+ 
+             cards.forEach(card => {
+                 card.style.opacity = '0';
+                 card.style.transform = 'translateY(20px)';
+                 card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                 observer.observe(card);
+             });
+         });
+ 
+         // Smooth scroll and form handling
+         function scrollToOrder(productType) {
+             const orderForm = document.getElementById('orderForm');
+             const productSelect = document.getElementById('productSelect');
+             
+             productSelect.value = productType;
+             orderForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+             
+             setTimeout(() => {
+                 productSelect.focus();
+             }, 800);
+         }
+ 
+         function handleOrderSubmit(event) {
+             event.preventDefault();
+             
+             const formData = {
+                 name: document.getElementById('customerName').value,
+                 phone: document.getElementById('customerPhone').value,
+                 email: document.getElementById('customerEmail').value,
+                 product: document.getElementById('productSelect').value,
+                 quantity: document.getElementById('quantity').value,
+                 address: document.getElementById('address').value,
+                 notes: document.getElementById('notes').value
+             };
+ 
+             const productNames = {
+                 'family': 'Gói Gia Đình',
+                 'farmer': 'Gói Nông Hộ',
+                 'business': 'Gói Doanh Nghiệp'
+             };
+ 
+             // Create success message
+             const successDiv = document.createElement('div');
+             successDiv.style.cssText = `
+                 position: fixed;
+                 top: 50%;
+                 left: 50%;
+                 transform: translate(-50%, -50%);
+                 background: white;
+                 padding: 3rem;
+                 border-radius: 20px;
+                 box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+                 z-index: 10000;
+                 max-width: 500px;
+                 width: 90%;
+                 text-align: center;
+                 animation: fadeInUp 0.5s ease;
+             `;
+ 
+             successDiv.innerHTML = `
+                 <div style="font-size: 4rem; margin-bottom: 1rem;">✅</div>
+                 <h3 style="color: #059669; font-size: 1.75rem; margin-bottom: 1rem; font-weight: 700;">
+                     Đặt Hàng Thành Công!
+                 </h3>
+                 <p style="color: #4A5568; font-size: 1.0625rem; margin-bottom: 0.75rem; line-height: 1.6;">
+                     Cảm ơn <strong>${formData.name}</strong> đã đặt hàng!
+                 </p>
+                 <p style="color: #718096; font-size: 0.9375rem; margin-bottom: 1.5rem;">
+                     Sản phẩm: <strong>${productNames[formData.product]}</strong><br>
+                     Số lượng: <strong>${formData.quantity}</strong><br>
+                     Chúng tôi sẽ liên hệ qua <strong>${formData.phone}</strong>
+                 </p>
+                 <div style="background: #F7FAFC; padding: 1rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                     <div style="font-size: 0.8125rem; color: #718096; margin-bottom: 0.25rem;">MÃ ĐƠN HÀNG</div>
+                     <div style="font-size: 1.25rem; font-weight: 700; color: #059669; font-family: monospace;">
+                         #DH${Date.now().toString().slice(-8)}
+                     </div>
+                 </div>
+                 <button onclick="this.parentElement.remove(); document.getElementById('overlay').remove();" 
+                         style="background: #059669; color: white; border: none; padding: 0.875rem 2rem; 
+                                border-radius: 10px; font-size: 0.9375rem; font-weight: 600; cursor: pointer;
+                                transition: all 0.2s ease;">
+                     Đóng
+                 </button>
+             `;
+ 
+             // Create overlay
+             const overlay = document.createElement('div');
+             overlay.id = 'overlay';
+             overlay.style.cssText = `
+                 position: fixed;
+                 top: 0;
+                 left: 0;
+                 width: 100%;
+                 height: 100%;
+                 background: rgba(0, 0, 0, 0.5);
+                 z-index: 9999;
+                 animation: fadeIn 0.3s ease;
+             `;
+ 
+             document.body.appendChild(overlay);
+             document.body.appendChild(successDiv);
+ 
+             // Reset form
+             document.getElementById('orderFormElement').reset();
+ 
+             // Auto close after 10 seconds
+             setTimeout(() => {
+                 if (document.body.contains(successDiv)) {
+                     successDiv.remove();
+                     overlay.remove();
+                 }
+             }, 10000);
+         }
+     </script>
+ </body>
+ </html>
