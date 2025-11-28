@@ -792,6 +792,27 @@
              box-shadow: var(--shadow-lg);
              border: 4px solid white;
          }
+         .team-avatar img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+.team-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;  /* khoảng cách dưới avatar */
+}
+.team-card-header {
+    display: flex;
+    flex-direction: column;     /* xếp dọc */
+    align-items: center;        /* căn giữa */
+    text-align: center;         /* chữ dưới cũng vào giữa */
+}
+
  
          .team-name {
              font-size: 1.125rem;
@@ -1227,7 +1248,7 @@
                                     /* FOOTER */
         .footer {
       width: 100%;
-      background: linear-gradient(135deg, #2d3436, #000000);
+      background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 100%);
       color: white;
       padding: 50px 20px 30px;
       text-align: center;
@@ -1659,7 +1680,7 @@
                          <path d="M35 20 L35 40 L45 30 L45 10 Z" fill="#FF9800" />
                      </svg>
                      <div class="ing-name">100g Đường Nâu</div>
-                     <div style="font-size: 0.8rem; color: #666;">(Hoặc mật rỉ)</div>
+                     <div style="font-size: 0.8rem; color: #666;"></div>
                  </div>
                  <div class="ingredient-card">
                      <svg class="ing-icon" viewBox="0 0 50 50">
@@ -1677,7 +1698,7 @@
                      <div class="step-number">1</div>
                      <div class="step-content">
                          <h4>Sơ chế</h4>
-                         <p>Rửa sạch lá đu đủ, để ráo nước. Cắt nhỏ hoặc xay nhuyễn lá để dễ chiết xuất tinh chất.</p>
+                         <p>Rửa sạch lá đu đủ, để ráo nước. Cắt nhỏ và xay nhuyễn lá để dễ chiết xuất tinh chất.</p>
                      </div>
                  </div>
                  <div class="step">
@@ -1839,7 +1860,9 @@
                  <div class="team-grid">
                      <div class="team-card">
                          <div class="team-card-header">
-                             <div class="team-avatar">👨‍🎓</div>
+                             <div class="team-avatar">
+                            <img src="1.jpg" alt="hien">
+                            </div>
                              <h3 class="team-name">Trần Thị Mỹ</h3>
                              <span class="team-role">Nhóm trưởng</span>
                          </div>
@@ -1849,8 +1872,10 @@
                      </div>
                      <div class="team-card">
                          <div class="team-card-header">
-                             <div class="team-avatar">👩‍🎓</div>
-                             <h3 class="team-name">Nguyễn Thanh Thảo</h3>
+                             <div class="team-avatar">
+                            <img src="1.jpg" alt="hien">
+                            </div>
+                             <h3 class="team-name">Nguyễn Thị Thanh Thảo</h3>
                              <span class="team-role">Nhóm phó</span>
                          </div>
                          <div class="team-card-body">
@@ -1859,9 +1884,9 @@
                      </div>
                      <div class="team-card">
                          <div class="team-card-header">
-                             <div class="supervisor-avatar">
-                                  <img src="3.jpg" alt="Pu">
-                              </div>
+                             <div class="team-avatar">
+                            <img src="3.jpg" alt="hien">
+                            </div>
                              <h3 class="team-name">Nguyễn Phương Uyên</h3>
                              <span class="team-role">Thành Viên</span>
                          </div>
@@ -1872,8 +1897,8 @@
                     
                      <div class="team-card">
                          <div class="team-card-header">
-                             <div class="supervisor-avatar">
-                                <img src="2.jpg" alt="Điệp">
+                             <div class="team-avatar">
+                            <img src="2.jpg" alt="hien">
                             </div>
                              <h3 class="team-name">Huỳnh Thị Hà Điệp</h3>
                              <span class="team-role">Thành Viên</span>
@@ -1884,8 +1909,8 @@
                      </div>
                      <div class="team-card">
                          <div class="team-card-header">
-                             <div class="supervisor-avatar">
-                                  <img src="1.jpg" alt="Hiển">
+                             <div class="team-avatar">
+                            <img src="1.jpg" alt="hien">
                             </div>
                              <h3 class="team-name">Nguyễn Văn Hiển</h3>
                              <span class="team-role">Thành Viên</span>
@@ -1895,7 +1920,70 @@
                          </div>
                      </div>
                  </div>
- 
+                <div class="team-card">
+                         <div class="team-card-header">
+                             <div class="team-avatar">
+                            <img src="1.jpg" alt="hien">
+                            </div>
+                             <h3 class="team-name">Nguyễn Hạnh Quyên</h3>
+                             <span class="team-role">Thành Viên</span>
+                         </div>
+                         <div class="team-card-body">
+                             <p class="team-description">Chịu trách nhiệm trong việc lên ý tưởng và quảng bá sản phẩm bằng video.</p>
+                         </div>
+                </div>
+
+                <div class="team-card">
+                         <div class="team-card-header">
+                             <div class="team-avatar">
+                            <img src="1.jpg" alt="hien">
+                            </div>
+                             <h3 class="team-name">Nguyễn Phương THùy</h3>
+                             <span class="team-role">Thành Viên</span>
+                         </div>
+                         <div class="team-card-body">
+                             <p class="team-description">Chịu trách nhiệm trong việc lên ý tưởng và quảng bá sản phẩm bằng video.</p>
+                         </div>
+                </div>
+
+                <div class="team-card">
+                         <div class="team-card-header">
+                             <div class="team-avatar">
+                            <img src="1.jpg" alt="hien">
+                            </div>
+                             <h3 class="team-name">Nguyễn Quỳnh Trâm</h3>
+                             <span class="team-role">Thành Viên</span>
+                         </div>
+                         <div class="team-card-body">
+                             <p class="team-description">Chịu trách nhiệm trong việc lên ý tưởng và quảng bá sản phẩm bằng video.</p>
+                         </div>
+                </div>
+
+                <div class="team-card">
+                         <div class="team-card-header">
+                             <div class="team-avatar">
+                            <img src="1.jpg" alt="hien">
+                            </div>
+                             <h3 class="team-name">Trịnh Thị Bình Nguyên</h3>
+                             <span class="team-role">Thành Viên</span>
+                         </div>
+                         <div class="team-card-body">
+                             <p class="team-description">Chịu trách nhiệm trong việc lên ý tưởng và quảng bá sản phẩm bằng video.</p>
+                         </div>
+                </div>
+
+                <div class="team-card">
+                         <div class="team-card-header">
+                             <div class="team-avatar">
+                            <img src="1.jpg" alt="hien">
+                            </div>
+                             <h3 class="team-name">Dỗ Ngọc Bảo Long</h3>
+                             <span class="team-role">Thành Viên</span>
+                         </div>
+                         <div class="team-card-body">
+                             <p class="team-description">Chịu trách nhiệm trong việc lên ý tưởng và quảng bá sản phẩm bằng video.</p>
+                         </div>
+                </div>
                  <!-- SUPERVISOR -->
                  <div class="supervisor-wrapper">
                      <div class="supervisor-badge">Giảng Viên Hướng Dẫn</div>
@@ -1906,10 +1994,10 @@
                          <div class="supervisor-info">
                              <h3>Cô. Nguyễn Thị Hồng Gấm</h3>
                              <div class="supervisor-title">🎓 Giáo Viên bọ môn Sinh Học</div>
-                             <p class="supervisor-description">Với hơn "10 ngàn năm" năm kinh nghiệm giảng dạy và nghiên cứu trong lĩnh vực sinh học ứng dụng, Cô đã đồng hành và định hướng cho nhóm trong suốt quá trình nghiên cứu, từ ý tưởng ban đầu đến sản phẩm hoàn thiện. Cô luôn khuyến khích tinh thần khoa học và sáng tạo của học sinh.</p>
+                             <p class="supervisor-description">Với hơn nhiều năm kinh nghiệm giảng dạy và nghiên cứu trong lĩnh vực sinh học ứng dụng, Cô đã đồng hành và định hướng cho nhóm trong suốt quá trình nghiên cứu, từ ý tưởng ban đầu đến sản phẩm hoàn thiện. Cô luôn khuyến khích tinh thần khoa học và sáng tạo của học sinh.</p>
                              <div class="supervisor-credentials">
-                                 <span class="credential-badge">Trình độ chuyên môn.. thạc sĩ.. Sinh học</span>
-                                 <span class="credential-badge">...năm kinh nghiệm</span>
+                                 <span class="credential-badge">Trình độ chuyên môn cao</span>
+                                 <span class="credential-badge">Nhiều năm kinh nghiệm</span>
                                  <span class="credential-badge">Giáo viên xuất sắc</span>
                              </div>
                          </div>
@@ -1935,13 +2023,13 @@
                          </div>
                          <div class="product-body">
                              <div class="product-price">
-                                 <div class="price-amount">150.000₫</div>
+                                 <div class="price-amount">15.000₫</div>
                                  <div class="price-label">/ Chai 500ml</div>
                              </div>
                              <ul class="product-features">
                                  <li>Dung tích 500ml tiện lợi</li>
-                                 <li>Sử dụng được 15-20 lần</li>
-                                 <li>Hạn sử dụng 6 tháng</li>
+                                 <li>Sử dụng được 1-2 lần</li>
+                                 <li>Hạn sử dụng 1 tháng</li>
                                  <li>Kèm hướng dẫn chi tiết</li>
                                  <li>Phù hợp vườn rau gia đình</li>
                              </ul>
@@ -1959,7 +2047,7 @@
                          <div class="product-body">
                              <div class="product-price">
                                  <div class="price-amount">250.000₫</div>
-                                 <div class="price-label">/ Chai 1 Lít</div>
+                                 <div class="price-label">/ Chai Lít</div>
                              </div>
                              <ul class="product-features">
                                  <li>Dung tích 1 lít kinh tế</li>
@@ -1982,7 +2070,7 @@
                          <div class="product-body">
                              <div class="product-price">
                                  <div class="price-amount">1.000.000₫</div>
-                                 <div class="price-label">/ Can 5 Lít</div>
+                                 <div class="price-label">/ Can 50 Lít</div>
                              </div>
                              <ul class="product-features">
                                  <li>Dung tích 5 lít cho sản xuất</li>
@@ -2025,8 +2113,8 @@
                                      <label class="form-label">Chọn Sản Phẩm <span class="required">*</span></label>
                                      <select class="form-select" id="productSelect" required>
                                          <option value="">-- Chọn sản phẩm --</option>
-                                         <option value="family">Gói Gia Đình - 150.000₫</option>
-                                         <option value="farmer">Gói Nông Hộ - 250.000₫</option>
+                                         <option value="family">Gói Gia Đình - 15.000₫</option>
+                                         <option value="farmer">Gói Nông Hộ - 25.000₫</option>
                                          <option value="business">Gói Doanh Nghiệp - 1.000.000₫</option>
                                      </select>
                                  </div>
@@ -2166,6 +2254,7 @@
                  z-index: 10000;
                  max-width: 500px;
                  width: 90%;
+
                  text-align: center;
                  animation: fadeInUp 0.5s ease;
              `;
